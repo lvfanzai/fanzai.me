@@ -320,10 +320,8 @@ mac_sdk_versions_supported := 10.11
 
 <h4 id="6-2-编译过程中会提示头文件定义冲突">6.2 编译过程中会提示头文件定义冲突</h4>
 
-<pre><code>external/libcxx/include/cmath:683:46: error: declaration conflicts with target of using declaration already in scope
-</code></pre>
-
-<p>回退到8.3.3</p>
+<p>external/libcxx/include/cmath:683:46: error: declaration conflicts with target of using declaration already in scope
+回退到8.3.3</p>
 
 <h4 id="6-3-出现error-syscall-的错误">6.3 出现error: &lsquo;syscall&rsquo;的错误</h4>
 
@@ -331,14 +329,12 @@ mac_sdk_versions_supported := 10.11
 
 <h4 id="6-4-bison编译错误">6.4 bison编译错误</h4>
 
-<pre><code>[ 85% 2068/2406] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
-FAILED: /bin/bash -c &quot;prebuilts/misc/darwin-x86/bison/bison -d -v --defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&quot;
-[ 85% 2068/2406] target  C: libcrypto_static &lt;= external/boringssl/src/crypto/ec/p256-64.c
+<p>[ 85% <sup>2068</sup>&frasl;<sub>2406</sub>] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
+FAILED: /bin/bash -c &ldquo;prebuilts/misc/darwin-x86/bison/bison -d -v &ndash;defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&rdquo;
+[ 85% <sup>2068</sup>&frasl;<sub>2406</sub>] target  C: libcrypto_static &lt;= external/boringssl/src/crypto/ec/p256-64.c
 ninja: build stopped: subcommand failed.
 make: *** [ninja_wrapper] Error 1
-</code></pre>
-
-<p>按照如下步骤解决</p>
+按照如下步骤解决</p>
 
 <pre><code>https://android-review.googlesource.com/c/platform/external/bison/+/517740/1/lib/vasnprintf.c   ---源码Bug
 Patch bison fix for High Sierra and build bison:
