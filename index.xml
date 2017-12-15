@@ -22,8 +22,8 @@
 
 &lt;ol&gt;
 &lt;li&gt;阅读，查阅；&lt;/li&gt;
-&lt;li&gt;编译调测制作对应手机root包；&lt;/li&gt;
-&lt;li&gt;编译定制对应手机ROM；&lt;/li&gt;
+&lt;li&gt;编译调测制作对应手机 root 包；&lt;/li&gt;
+&lt;li&gt;编译定制对应手机 ROM；&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
