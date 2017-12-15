@@ -16,10 +16,7 @@
   
   <meta name="author" content="凡仔" />
   <meta name="description" content="Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。
- 阅读，查阅；
- 编译调测制作对应手机root包；
- 编译定制对应手机ROM；
-  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+1. 阅读，查阅； 2. 编译调测制作对应手机root包； 3. 编译定制对应手机ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
 
   
   
@@ -27,10 +24,7 @@
     <meta name="twitter:site" content="@lvfanzai" />
     <meta name="twitter:title" content="Android 源码下载、编译、调试、下载" />
     <meta name="twitter:description" content="Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。
- 阅读，查阅；
- 编译调测制作对应手机root包；
- 编译定制对应手机ROM；
-  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+1. 阅读，查阅； 2. 编译调测制作对应手机root包； 3. 编译定制对应手机ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -197,13 +191,10 @@
     </header>
     <article class="post-content"><p>Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。</p>
 
-<ol>
-<li><p>阅读，查阅；</p></li>
-
-<li><p>编译调测制作对应手机root包；</p></li>
-
-<li><p>编译定制对应手机ROM；</p></li>
-</ol>
+<pre><code>1. 阅读，查阅；
+2. 编译调测制作对应手机root包；
+3. 编译定制对应手机ROM；
+</code></pre>
 
 <p>其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
  </p>
@@ -288,9 +279,8 @@ http://lukeat.me/2017/03/20/Build-Android-Kernel-of-ARM64-on-OS-X/
 
 <h3 id="生成boot-img镜像">生成boot.img镜像</h3>
 
-<p>在路径 kernel\msm\arch\arm64\boot 中将编译生成的 Image.gz-dtb 复制到Android 源码路径device\huawei\angler-kernel 路径中 nexus6p 的代号为 angler 华为代工，故在以上路径。</p>
-
-<p>回到android源码根目录，进行环境设置</p>
+<p>在路径 kernel\msm\arch\arm64\boot 中将编译生成的 Image.gz-dtb 复制到Android 源码路径device\huawei\angler-kernel 路径中 nexus6p 的代号为 angler 华为代工，故在以上路径。
+回到android源码根目录，进行环境设置</p>
 
 <pre><code>source build/envsetup.sh 
 Lunch 选择angler相关选项（如果需要编译其他内核，选择对应即可）
@@ -305,14 +295,15 @@ fastboot flash boot bootimage
 fastboot reboot
 </code></pre>
 
-<p>以上编译出来的boot镜像为未root权限镜像。</p>
+<p>以上编译出来的boot镜像为未root权限镜像。
+如需要编译root权限镜像，以此运行如下命令：</p>
 
-<p>如需要编译root权限镜像，以此运行如下命令：
-source build/envsetup.sh
+<pre><code>source build/envsetup.sh 
 Lunch 选择angler相关选项（如果需要编译其他内核，选择对应即可）
 choosecombo 选择angler，最后一项选择eng即可，root的关键是编译时选择eng。
 （或者直接运行命令choosecombo 1 aosp_angler 3默认选择好eng）
-make bootimage -j4</p>
+make bootimage -j4
+</code></pre>
 
 <p>编译过程中可能存在的问题：</p>
 
@@ -320,10 +311,12 @@ make bootimage -j4</p>
 
 <p>解决办法就是将mac_sdk_versions_supported改为系统中所装版本
  #mac_sdk_versions_supported := 10.6 10.7 10.8 10.9
-mac_sdk_versions_supported := 10.11</p>
+mac_sdk_versions_supported := 10.11
+所以我们需要下载其他的 sdk 放到这个文件夹下面
+我是在这个网站下下的, 没有任何问题 </p>
 
-<p>所以我们需要下载其他的 sdk 放到这个文件夹下面
-我是在这个网站下下的, 没有任何问题 <a href="https://github.com/phracker/MacOSX-SDKs/releases">https://github.com/phracker/MacOSX-SDKs/releases</a></p>
+<pre><code>https://github.com/phracker/MacOSX-SDKs/releases
+</code></pre>
 
 <h4 id="编译过程中会提示头文件定义冲突">编译过程中会提示头文件定义冲突</h4>
 
