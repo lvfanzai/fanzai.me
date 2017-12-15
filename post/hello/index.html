@@ -16,16 +16,16 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。
-1. 阅读，查阅； 2. 编译调测制作对应手机root包； 3. 编译定制对应手机ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+  <meta name="description" content="Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:
+ 阅读，查阅； 编译调测制作对应手机root包； 编译定制对应手机ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@lvfanzai" />
     <meta name="twitter:title" content="Android 源码下载、编译、调试、下载" />
-    <meta name="twitter:description" content="Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。
-1. 阅读，查阅； 2. 编译调测制作对应手机root包； 3. 编译定制对应手机ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+    <meta name="twitter:description" content="Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:
+ 阅读，查阅； 编译调测制作对应手机root包； 编译定制对应手机ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -202,61 +202,66 @@
       <h1 class="post-title">Android 源码下载、编译、调试、下载</h1>
       <p class="post-meta">@凡仔 · Jul 30, 2017 · 2 min read</p>
     </header>
-    <article class="post-content"><p>Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。</p>
+    <article class="post-content"><p>Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:</p>
 
-<pre><code>1. 阅读，查阅；
-2. 编译调测制作对应手机root包；
-3. 编译定制对应手机ROM；
-</code></pre>
+<ol>
+<li>阅读，查阅；</li>
+<li>编译调测制作对应手机root包；</li>
+<li>编译定制对应手机ROM；</li>
+</ol>
 
 <p>其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
  </p>
 
-<h3 id="1-新建apfs分区">1. 新建APFS分区</h3>
+<h3 id="1-新建-apfs-分区">1. 新建 APFS 分区</h3>
 
-<p>Mac下选择磁盘工具，添加宗卷，选择APFS区分大小写。</p>
+<p>Mac 下选择磁盘工具，添加宗卷，选择APFS区分大小写。</p>
 
-<h3 id="2-下载对应tag及版本镜像">2. 下载对应Tag及版本镜像</h3>
+<h3 id="2-下载对应-tag-及版本镜像">2. 下载对应 Tag 及版本镜像</h3>
 
-<p>查阅google官网上</p>
+<p>查阅 Google 官网上</p>
 
-<pre><code>https://source.android.com/setup/build-numbers
-</code></pre>
+<p><a href="https://source.android.com/setup/build-numbers">https://source.android.com/setup/build-numbers</a></p>
 
-<p>android-7.1.2_r28   N2G48C
-下载命令：</p>
+<p>android-7.1.2_r28   N2G48C</p>
+
+<p>下载命令：</p>
 
 <pre><code>repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r28
 </code></pre>
 
 <p>镜像文件下载地址：</p>
 
-<pre><code>https://developers.google.com/android/images
-</code></pre>
+<p><a href="https://developers.google.com/android/images">https://developers.google.com/android/images</a></p>
 
 <h3 id="3-下载对应的-kernel-代码">3. 下载对应的 kernel 代码</h3>
 
-<p>kernel内核为单独一个仓，由于nexus 6p为高通平台，下载msm即可。</p>
+<p>kernel 内核为单独一个仓，由于 nexus 6p 为高通平台，下载msm即可。</p>
 
 <pre><code>git clone https://android.googlesource.com/kernel/msm 
 </code></pre>
 
-<p>msm 内核项目是 Google 公司针对高通msm移动芯片组（骁龙处理器）而开发的内核项目
-我们可以在设置 &gt; 关于手机 &gt; 内核版本 中直接查看内核版本信息，也可以通过cat /proc/version 命令查看。内核版本信息的格式为 kernel version-gXXXXXXX,其中 XXXXXXX部分的值是git提交中的 short commit id的值
-在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e</code> 为下载对应版本的源码。</p>
+<p>msm 内核项目是 Google 公司针对高通msm移动芯片组（骁龙处理器）而开发的内核项目</p>
+
+<p>我们可以在设置 &gt; 关于手机 &gt; 内核版本 中直接查看内核版本信息，也可以通过cat /proc/version 命令查看。内核版本信息的格式为 kernel version-gXXXXXXX,其中 XXXXXXX部分的值是git提交中的 short commit id的值</p>
+
+<p>在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e</code> 为下载对应版本的源码。</p>
 
 <h3 id="4-修改-kernel-源码中-makefile">4. 修改 kernel 源码中 Makefile</h3>
 
-<p>将 msm 目录下的 Makefile 文件中 ARCH 和 CROSS_COPMPILE 修改为如下
-Mac路径</p>
+<p>将 msm 目录下的 Makefile 文件中 ARCH 和 CROSS_COPMPILE 修改为如下</p>
+
+<p>Mac路径</p>
 
 <pre><code>ARCH           ?= arm64 
 CROSS_COMPILE  ?= /Volumes/winsky/aosp/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android- 
 </code></pre>
 
-<p>其中 CROSS_COPMPILE 为交叉编译工具，路径在 Android 源码 Prebuilts 对应目录下。
-Mac路径需要选择 darwin-x86 路径下
-Liunx 路径设置</p>
+<p>其中 CROSS_COPMPILE 为交叉编译工具，路径在 Android 源码 Prebuilts 对应目录下。</p>
+
+<p>Mac路径需要选择 darwin-x86 路径下</p>
+
+<p>Liunx 路径设置</p>
 
 <pre><code>ARCH           ?= arm64 
 CROSS_COMPILE	?= /home/ivan/android_nexus6p/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
@@ -268,8 +273,9 @@ CROSS_COMPILE	?= /home/ivan/android_nexus6p/prebuilts/gcc/linux-x86/aarch64/aarc
 make
 </code></pre>
 
-<p>编译完成后，生成的 Image.gz-dtb 在 <code>arch/arm64/boot/Image.gz-dtb</code>路径下
-编译过程中，以下错误都是由于环境未配置好导致的编译错误，以及网上找的解决办法</p>
+<p>编译完成后，生成的 Image.gz-dtb 在 <code>arch/arm64/boot/Image.gz-dtb</code>路径下</p>
+
+<p>编译过程中，以下错误都是由于环境未配置好导致的编译错误，以及网上找的解决办法</p>
 
 <pre><code>error: 'vdso_offset_sigtramp' undeclared (first use in this function) 
   (void *)(vdso_offset_##name - VDSO_LBASE + (unsigned long)(base)); \ 
@@ -281,9 +287,11 @@ make
 's/^\([0-9a-fA-F]*\) . VDSO_\([a-zA-Z0-9_]*\)$/\#define vdso_offset_\2  0x\1/p'
 </code></pre>
 
-<p>其他错误
-编译过程中会出现elf.h找不到的问题
-安装libelf</p>
+<p>其他错误</p>
+
+<p>编译过程中会出现elf.h找不到的问题</p>
+
+<p>安装libelf</p>
 
 <pre><code>http://stackoverflow.com/questions/10018764/building-linux-kernel-on-mac-os-x
 https://forum.xda-developers.com/android/help/failed-to-build-arm64-goldfish-kernel-t3342461
@@ -300,16 +308,18 @@ Lunch 选择angler相关选项（如果需要编译其他内核，选择对应�
 make bootimage -j4
 </code></pre>
 
-<p>最终生成的 bootimage在Android 源码out/target/product/angler/boot.img下
-运行烧写命令：</p>
+<p>最终生成的 bootimage在Android 源码out/target/product/angler/boot.img下</p>
+
+<p>运行烧写命令：</p>
 
 <pre><code>adb reboot bootloader  ----进入Bootloaer
 fastboot flash boot bootimage
 fastboot reboot
 </code></pre>
 
-<p>以上编译出来的boot镜像为未root权限镜像。
-如需要编译root权限镜像，以此运行如下命令：</p>
+<p>以上编译出来的boot镜像为未root权限镜像。</p>
+
+<p>如需要编译root权限镜像，以此运行如下命令：</p>
 
 <pre><code>source build/envsetup.sh 
 Lunch 选择angler相关选项（如果需要编译其他内核，选择对应即可）
@@ -322,11 +332,15 @@ make bootimage -j4
 
 <h4 id="6-1-lunch过程中会出现找不到xcode不支持">6.1 lunch过程中会出现找不到xcode不支持，</h4>
 
-<p>解决办法就是将mac_sdk_versions_supported改为系统中所装版本
- #mac_sdk_versions_supported := 10.6 10.7 10.8 10.9
+<p>解决办法就是将mac_sdk_versions_supported改为系统中所装版本</p>
+
+<pre><code> #mac_sdk_versions_supported := 10.6 10.7 10.8 10.9
 mac_sdk_versions_supported := 10.11
-所以我们需要下载其他的 sdk 放到这个文件夹下面
-我是在这个网站下下的, 没有任何问题 </p>
+</code></pre>
+
+<p>所以我们需要下载其他的 sdk 放到这个文件夹下面</p>
+
+<p>我是在这个网站下下的, 没有任何问题 </p>
 
 <pre><code>https://github.com/phracker/MacOSX-SDKs/releases
 </code></pre>
@@ -338,8 +352,9 @@ mac_sdk_versions_supported := 10.11
 
 <h4 id="6-2-编译过程中会提示头文件定义冲突">6.2 编译过程中会提示头文件定义冲突</h4>
 
-<p>external/libcxx/include/cmath:683:46: error: declaration conflicts with target of using declaration already in scope
-回退到8.3.3</p>
+<p>external/libcxx/include/cmath:683:46: error: declaration conflicts with target of using declaration already in scope</p>
+
+<p>回退到8.3.3</p>
 
 <h4 id="6-3-出现error-syscall-的错误">6.3 出现error: &lsquo;syscall&rsquo;的错误</h4>
 
@@ -347,12 +362,14 @@ mac_sdk_versions_supported := 10.11
 
 <h4 id="6-4-bison编译错误">6.4 bison编译错误</h4>
 
-<p>[ 85% <sup>2068</sup>&frasl;<sub>2406</sub>] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
-FAILED: /bin/bash -c &ldquo;prebuilts/misc/darwin-x86/bison/bison -d -v &ndash;defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&rdquo;
-[ 85% <sup>2068</sup>&frasl;<sub>2406</sub>] target  C: libcrypto_static &lt;= external/boringssl/src/crypto/ec/p256-64.c
+<pre><code>[ 85% 2068/2406] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
+FAILED: /bin/bash -c &quot;prebuilts/misc/darwin-x86/bison/bison -d -v --defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&quot;
+[ 85% 2068/2406] target  C: libcrypto_static &lt;= external/boringssl/src/crypto/ec/p256-64.c
 ninja: build stopped: subcommand failed.
 make: *** [ninja_wrapper] Error 1
-按照如下步骤解决</p>
+</code></pre>
+
+<p>按照如下步骤解决</p>
 
 <pre><code>https://android-review.googlesource.com/c/platform/external/bison/+/517740/1/lib/vasnprintf.c   ---源码Bug
 Patch bison fix for High Sierra and build bison:
@@ -365,8 +382,7 @@ Patch bison fix for High Sierra and build bison:
 
 <p>参考链接：</p>
 
-<pre><code>https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ
-</code></pre></article>
+<p><a href="https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ">https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ</a></p></article>
     <footer class="post-footer">
       
       <p class="post-copyright">
