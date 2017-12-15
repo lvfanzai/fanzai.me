@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on 凡仔</title>
+    <link>https://fanzai.me/tags/android/</link>
+    <description>Recent content in Android on 凡仔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>Copyright © 2017, 凡仔</copyright>
+    <lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fanzai.me/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android 源码下载、编译、调试、下载</title>
+      <link>https://fanzai.me/post/hello/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/hello/</guid>
+      <description>&lt;p&gt;Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;阅读，查阅；&lt;/li&gt;
+&lt;li&gt;编译调测制作对应手机 root 包；&lt;/li&gt;
+&lt;li&gt;编译定制对应手机 ROM；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
+ &lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
