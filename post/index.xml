@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>Copyright © 2017, 凡仔</copyright>
-    <lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fanzai.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linux 命令积累</title>
+      <link>https://fanzai.me/post/linux-cmd/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/linux-cmd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android 源码下载、编译、调试、下载</title>
@@ -27,16 +36,6 @@
 &lt;/ol&gt;
 
 &lt;p&gt;其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
- &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hello World!</title>
-      <link>https://fanzai.me/post/2017-12-13/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://fanzai.me/post/2017-12-13/</guid>
-      <description>&lt;p&gt;Hello World! 第一篇文章。
  &lt;/p&gt;</description>
     </item>
     
