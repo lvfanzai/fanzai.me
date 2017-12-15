@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Android 源码下载、编译、调试、下载</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="凡仔" />
+  <meta name="description" content="Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:
+ 阅读，查阅； 编译调测制作对应手机 root 包； 编译定制对应手机 ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lvfanzai" />
+    <meta name="twitter:title" content="Android 源码下载、编译、调试、下载" />
+    <meta name="twitter:description" content="Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:
+ 阅读，查阅； 编译调测制作对应手机 root 包； 编译定制对应手机 ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+    <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.31.1" />
+
+
+<link rel="canonical" href="https://fanzai.me/post/android-kernel/" />
+<link rel="alternative" href="https://fanzai.me/index.xml" title="凡仔" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="凡仔" />
+<meta name="msapplication-tooltip" content="凡仔" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="https://fanzai.me/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://fanzai.me/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://fanzai.me/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="https://fanzai.me/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="https://fanzai.me/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="https://fanzai.me/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="https://fanzai.me/css/bundle.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="https://avatars0.githubusercontent.com/u/13600881" alt="Avatar">
+  
+  <h2 class="title">凡仔</h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            
+              is-active
+            ">
+            <a href="https://fanzai.me/">Home</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="https://github.com/lvfanzai">Github</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+
+      
+      <li class="social-item">
+        <a href="//github.com/lvfanzai" title="GitHub"><span class="icon icon-github"></span></a>
+      </li>
+
+      <li class="social-item">
+        <a href="//twitter.com/lvfanzai" title="Twitter"><span class="icon icon-twitter"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="https://fanzai.me/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Android 源码下载、编译、调试、下载</h1>
+      <p class="post-meta">@凡仔 · Jul 30, 2017 · 2 min read</p>
+    </header>
+    <article class="post-content"><p>Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:</p>
+
+<ol>
+<li>阅读，查阅；</li>
+<li>编译调测制作对应手机 root 包；</li>
+<li>编译定制对应手机 ROM；</li>
+</ol>
+
+<p>其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
+ </p>
+
+<h3 id="一-确保分区大小写敏感">一、确保分区大小写敏感</h3>
+
+<p>对于 Mac 10.13 以上、使用 APFS 分区的场景：</p>
+
+<p>运行“磁盘工具”，选择“添加宗卷”，选择“APFS区分大小写”。</p>
+
+<h3 id="二-下载对应-tag-及版本镜像">二、下载对应 Tag 及版本镜像</h3>
+
+<p>查阅 Google 官网上</p>
+
+<p><a href="https://source.android.com/setup/build-numbers">https://source.android.com/setup/build-numbers</a></p>
+
+<p>android-7.1.2_r28   N2G48C</p>
+
+<p>下载命令：</p>
+
+<pre><code>repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r28
+</code></pre>
+
+<p>镜像文件下载地址：</p>
+
+<p><a href="https://developers.google.com/android/images">https://developers.google.com/android/images</a></p>
+
+<h3 id="三-下载对应的-kernel-代码">三、下载对应的 kernel 代码</h3>
+
+<p>kernel 内核为单独一个仓，由于 nexus 6p 为高通平台，下载msm即可。</p>
+
+<pre><code>git clone https://android.googlesource.com/kernel/msm 
+</code></pre>
+
+<p>msm 内核项目是 Google 公司针对高通 msm 移动芯片组（骁龙处理器）而开发的内核项目</p>
+
+<p>我们可以在设置 &gt; 关于手机 &gt; 内核版本 中直接查看内核版本信息，也可以通过 <code>cat /proc/version</code> 命令查看。内核版本信息的格式为 kernel version-gXXXXXXX ,其中 XXXXXXX 部分的值是 git 提交中的 short commit id的值</p>
+
+<p>在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e</code> 为下载对应版本的源码。</p>
+
+<h3 id="四-修改-kernel-源码中-makefile">四、修改 kernel 源码中 Makefile</h3>
+
+<p>将 msm 目录下的 Makefile 文件中 ARCH 和 CROSS_COPMPILE 修改为如下</p>
+
+<p>Mac路径</p>
+
+<pre><code>ARCH           ?= arm64 
+CROSS_COMPILE  ?= /Volumes/winsky/aosp/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android- 
+</code></pre>
+
+<p>其中 CROSS_COPMPILE 为交叉编译工具，路径在 Android 源码 Prebuilts 对应目录下。</p>
+
+<p>Mac路径需要选择 darwin-x86 路径下</p>
+
+<p>Liunx 路径设置</p>
+
+<pre><code>ARCH           ?= arm64 
+CROSS_COMPILE	?= /home/ivan/android_nexus6p/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+</code></pre>
+
+<h3 id="五-开始编译内核">五、开始编译内核</h3>
+
+<pre><code>make  angler_defconfig
+make
+</code></pre>
+
+<p>编译完成后，生成的 Image.gz-dtb 在 <code>arch/arm64/boot/Image.gz-dtb</code>路径下</p>
+
+<p>编译过程中，以下错误都是由于环境未配置好导致的编译错误，以及网上找的解决办法</p>
+
+<pre><code>error: 'vdso_offset_sigtramp' undeclared (first use in this function) 
+  (void *)(vdso_offset_##name - VDSO_LBASE + (unsigned long)(base)); \ 
+更改文件 
+更改arch/arm64/kernel/vdso/gen_vdso_offsets.sh脚本 
+中 
+'s/^\([0-9a-fA-F]*\) . VDSO_\([a-zA-Z0-9_]*\)$/\#define vdso_offset_\2\t0x\1/p'
+改为
+'s/^\([0-9a-fA-F]*\) . VDSO_\([a-zA-Z0-9_]*\)$/\#define vdso_offset_\2  0x\1/p'
+</code></pre>
+
+<p>其他错误</p>
+
+<p>编译过程中会出现 elf.h 找不到的问题</p>
+
+<p>安装 libelf</p>
+
+<pre><code>http://stackoverflow.com/questions/10018764/building-linux-kernel-on-mac-os-x
+https://forum.xda-developers.com/android/help/failed-to-build-arm64-goldfish-kernel-t3342461
+http://lukeat.me/2017/03/20/Build-Android-Kernel-of-ARM64-on-OS-X/
+</code></pre>
+
+<h3 id="六-生成-boot-img-镜像">六、生成 boot.img 镜像</h3>
+
+<p>在路径 kernel\msm\arch\arm64\boot 中将编译生成的 Image.gz-dtb 复制到Android 源码路径device\huawei\angler-kernel 路径中 nexus6p 的代号为 angler 华为代工，故在以上路径。
+回到android源码根目录，进行环境设置</p>
+
+<pre><code>source build/envsetup.sh 
+Lunch 选择angler相关选项（如果需要编译其他内核，选择对应即可）
+make bootimage -j4
+</code></pre>
+
+<p>最终生成的 bootimage 在 Android 源码 <code>out/target/product/angler/boot.img</code> 下</p>
+
+<p>运行烧写命令：</p>
+
+<pre><code>adb reboot bootloader  ----进入Bootloaer
+fastboot flash boot bootimage
+fastboot reboot
+</code></pre>
+
+<p>以上编译出来的 boot 镜像为未 root 权限镜像。</p>
+
+<p>如需要编译 root 权限镜像，以此运行如下命令：</p>
+
+<pre><code>source build/envsetup.sh 
+Lunch 选择 angler 相关选项（如果需要编译其他内核，选择对应即可）
+choosecombo 选择 angler，最后一项选择 eng 即可，root 的关键是编译时选择 eng。
+（或者直接运行命令 choosecombo 1 aosp_angler 3 默认选择好eng）
+make bootimage -j4
+</code></pre>
+
+<p>编译过程中可能存在的问题：</p>
+
+<h4 id="一-lunch-过程中会出现找不到-xcode-不支持">（一）lunch 过程中会出现找不到 xcode 不支持</h4>
+
+<p>解决办法就是将 mac_sdk_versions_supported 改为系统中所装版本</p>
+
+<pre><code> #mac_sdk_versions_supported := 10.6 10.7 10.8 10.9
+mac_sdk_versions_supported := 10.11
+</code></pre>
+
+<p>所以我们需要下载其他的 sdk 放到这个文件夹下面</p>
+
+<p>我是在这个网站下下的, 没有任何问题 
+<a href="https://github.com/phracker/MacOSX-SDKs/releases">https://github.com/phracker/MacOSX-SDKs/releases</a>
+参考链接
+<a href="http://www.jianshu.com/p/1513fc9e1a74">http://www.jianshu.com/p/1513fc9e1a74</a></p>
+
+<h4 id="二-编译过程中会提示头文件定义冲突">（二）编译过程中会提示头文件定义冲突</h4>
+
+<p>external/libcxx/include/cmath:683:46: error: declaration conflicts with target of using declaration already in scope</p>
+
+<p>回退到 8.3.3</p>
+
+<h4 id="三-出现-error-syscall-的错误">（三）出现 error: &lsquo;syscall&rsquo;的错误</h4>
+
+<p>将 xcode 回退到 8.3.3 即可</p>
+
+<h4 id="四-bison-编译错误">（四）bison 编译错误</h4>
+
+<pre><code>[ 85% 2068/2406] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
+FAILED: /bin/bash -c &quot;prebuilts/misc/darwin-x86/bison/bison -d -v --defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&quot;
+[ 85% 2068/2406] target  C: libcrypto_static &lt;= external/boringssl/src/crypto/ec/p256-64.c
+ninja: build stopped: subcommand failed.
+make: *** [ninja_wrapper] Error 1
+</code></pre>
+
+<p>按照如下步骤解决</p>
+
+<pre><code>https://android-review.googlesource.com/c/platform/external/bison/+/517740/1/lib/vasnprintf.c   ---源码Bug
+Patch bison fix for High Sierra and build bison:
+	◦	cd /Volumes/AOSP/external/bison
+	◦	git cherry-pick c0c852bd6fe462b148475476d9124fd740eba160
+	◦	mma
+	•	Replace prebuilt bison binary with patched binary
+	◦	cp /Volumes/AOSP/out/host/darwin-x86/bin/bison /Volumes/AOSP/prebuilts/misc/darwin-x86/bison/
+</code></pre>
+
+<p>参考链接：</p>
+
+<p><a href="https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ">https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ</a></p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://fanzai.me/tags/android"><span class="tag">Android</span></a></li>
+        
+          <li><a href="https://fanzai.me/tags/kernel"><span class="tag">Kernel</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        Copyright © 2017, 凡仔This post was published <strong>138</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017 凡仔</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+<script src="https://fanzai.me/js/bundle.js"></script>
+
+
+
+
+  </body>
+</html>
