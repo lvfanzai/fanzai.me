@@ -13,21 +13,28 @@
     
     
     <item>
-      <title>Hello World!</title>
-      <link>https://fanzai.me/post/2017-12-13/</link>
+      <title>Android 源码下载、编译、调试、下载</title>
+      <link>https://fanzai.me/post/hello/</link>
       <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://fanzai.me/post/2017-12-13/</guid>
-      <description>&lt;p&gt;Hello World! 第一篇文章。
+      <guid>https://fanzai.me/post/hello/</guid>
+      <description>&lt;p&gt;Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;阅读，查阅；&lt;/li&gt;
+&lt;li&gt;编译调测制作对应手机root包；&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;编译定制对应手机ROM；
+其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
  &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hello World!</title>
-      <link>https://fanzai.me/post/hello/</link>
+      <link>https://fanzai.me/post/2017-12-13/</link>
       <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://fanzai.me/post/hello/</guid>
+      <guid>https://fanzai.me/post/2017-12-13/</guid>
       <description>&lt;p&gt;Hello World! 第一篇文章。
  &lt;/p&gt;</description>
     </item>
