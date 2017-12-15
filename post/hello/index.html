@@ -213,11 +213,11 @@
 <p>其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
  </p>
 
-<h3 id="1-新建-apfs-分区">1. 新建 APFS 分区</h3>
+<h3 id="一-新建-apfs-分区">一、新建 APFS 分区</h3>
 
 <p>Mac 下选择磁盘工具，添加宗卷，选择APFS区分大小写。</p>
 
-<h3 id="2-下载对应-tag-及版本镜像">2. 下载对应 Tag 及版本镜像</h3>
+<h3 id="二-下载对应-tag-及版本镜像">二、下载对应 Tag 及版本镜像</h3>
 
 <p>查阅 Google 官网上</p>
 
@@ -234,7 +234,7 @@
 
 <p><a href="https://developers.google.com/android/images">https://developers.google.com/android/images</a></p>
 
-<h3 id="3-下载对应的-kernel-代码">3. 下载对应的 kernel 代码</h3>
+<h3 id="三-下载对应的-kernel-代码">三、下载对应的 kernel 代码</h3>
 
 <p>kernel 内核为单独一个仓，由于 nexus 6p 为高通平台，下载msm即可。</p>
 
@@ -247,7 +247,7 @@
 
 <p>在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e</code> 为下载对应版本的源码。</p>
 
-<h3 id="4-修改-kernel-源码中-makefile">4. 修改 kernel 源码中 Makefile</h3>
+<h3 id="四-修改-kernel-源码中-makefile">四、修改 kernel 源码中 Makefile</h3>
 
 <p>将 msm 目录下的 Makefile 文件中 ARCH 和 CROSS_COPMPILE 修改为如下</p>
 
@@ -267,7 +267,7 @@ CROSS_COMPILE  ?= /Volumes/winsky/aosp/prebuilts/gcc/darwin-x86/aarch64/aarch6
 CROSS_COMPILE	?= /home/ivan/android_nexus6p/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 </code></pre>
 
-<h3 id="5-开始编译内核">5. 开始编译内核</h3>
+<h3 id="五-开始编译内核">五、开始编译内核</h3>
 
 <pre><code>make  angler_defconfig
 make
@@ -298,7 +298,7 @@ https://forum.xda-developers.com/android/help/failed-to-build-arm64-goldfish-ker
 http://lukeat.me/2017/03/20/Build-Android-Kernel-of-ARM64-on-OS-X/
 </code></pre>
 
-<h3 id="6-生成boot-img镜像">6. 生成boot.img镜像</h3>
+<h3 id="六-生成boot-img镜像">六、生成boot.img镜像</h3>
 
 <p>在路径 kernel\msm\arch\arm64\boot 中将编译生成的 Image.gz-dtb 复制到Android 源码路径device\huawei\angler-kernel 路径中 nexus6p 的代号为 angler 华为代工，故在以上路径。
 回到android源码根目录，进行环境设置</p>
@@ -330,7 +330,7 @@ make bootimage -j4
 
 <p>编译过程中可能存在的问题：</p>
 
-<h4 id="6-1-lunch过程中会出现找不到xcode不支持">6.1 lunch过程中会出现找不到xcode不支持，</h4>
+<h4 id="一-lunch过程中会出现找不到xcode不支持">一）lunch过程中会出现找不到xcode不支持，</h4>
 
 <p>解决办法就是将mac_sdk_versions_supported改为系统中所装版本</p>
 
@@ -350,17 +350,17 @@ mac_sdk_versions_supported := 10.11
 <pre><code>http://www.jianshu.com/p/1513fc9e1a74
 </code></pre>
 
-<h4 id="6-2-编译过程中会提示头文件定义冲突">6.2 编译过程中会提示头文件定义冲突</h4>
+<h4 id="二-编译过程中会提示头文件定义冲突">二）编译过程中会提示头文件定义冲突</h4>
 
 <p>external/libcxx/include/cmath:683:46: error: declaration conflicts with target of using declaration already in scope</p>
 
 <p>回退到8.3.3</p>
 
-<h4 id="6-3-出现error-syscall-的错误">6.3 出现error: &lsquo;syscall&rsquo;的错误</h4>
+<h4 id="三-出现error-syscall-的错误">三）出现error: &lsquo;syscall&rsquo;的错误</h4>
 
 <p>将xcode回退到8.3.3即可</p>
 
-<h4 id="6-4-bison编译错误">6.4 bison编译错误</h4>
+<h4 id="四-bison编译错误">四）bison编译错误</h4>
 
 <pre><code>[ 85% 2068/2406] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
 FAILED: /bin/bash -c &quot;prebuilts/misc/darwin-x86/bison/bison -d -v --defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&quot;
