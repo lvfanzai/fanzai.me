@@ -16,7 +16,10 @@
   
   <meta name="author" content="凡仔" />
   <meta name="description" content="Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。
- 阅读，查阅； 编译调测制作对应手机root包； 编译定制对应手机ROM； 其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+ 阅读，查阅；
+ 编译调测制作对应手机root包；
+ 编译定制对应手机ROM；
+  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
 
   
   
@@ -24,7 +27,10 @@
     <meta name="twitter:site" content="@lvfanzai" />
     <meta name="twitter:title" content="Android 源码下载、编译、调试、下载" />
     <meta name="twitter:description" content="Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。
- 阅读，查阅； 编译调测制作对应手机root包； 编译定制对应手机ROM； 其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
+ 阅读，查阅；
+ 编译调测制作对应手机root包；
+ 编译定制对应手机ROM；
+  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 " />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -192,49 +198,50 @@
     <article class="post-content"><p>Android源码由google管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种。</p>
 
 <ol>
-<li>阅读，查阅；</li>
-<li>编译调测制作对应手机root包；</li>
+<li><p>阅读，查阅；</p></li>
 
-<li><p>编译定制对应手机ROM；
-其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
- </p>
+<li><p>编译调测制作对应手机root包；</p></li>
 
-<h2 id="新建apfs分区">新建APFS分区</h2>
-
-<p>Mac下选择磁盘工具，添加宗卷，选择APFS区分大小写。</p></li>
+<li><p>编译定制对应手机ROM；</p></li>
 </ol>
 
-<h2 id="下载对应tag及版本镜像">下载对应Tag及版本镜像</h2>
+<p>其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
+ </p>
+
+<h3 id="新建apfs分区">新建APFS分区</h3>
+
+<p>Mac下选择磁盘工具，添加宗卷，选择APFS区分大小写。</p>
+
+<h3 id="下载对应tag及版本镜像">下载对应Tag及版本镜像</h3>
 
 <p>查阅google官网上</p>
 
-<p><a href="https://source.android.com/setup/build-numbers">https://source.android.com/setup/build-numbers</a></p>
+<pre><code>https://source.android.com/setup/build-numbers
+</code></pre>
 
-<p>android-7.1.2_r28   N2G48C</p>
-
-<p>下载命令：</p>
+<p>android-7.1.2_r28   N2G48C
+下载命令：</p>
 
 <pre><code>repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r28
 </code></pre>
 
 <p>镜像文件下载地址：</p>
 
-<p><a href="https://developers.google.com/android/images">https://developers.google.com/android/images</a></p>
+<pre><code>https://developers.google.com/android/images
+</code></pre>
 
-<h2 id="下载对应的-kernel-代码">下载对应的 kernel 代码</h2>
+<h3 id="下载对应的-kernel-代码">下载对应的 kernel 代码</h3>
 
 <p>kernel内核为单独一个仓，由于nexus 6p为高通平台，下载msm即可。</p>
 
 <pre><code>git clone https://android.googlesource.com/kernel/msm 
 </code></pre>
 
-<p>msm 内核项目是 Google 公司针对高通msm移动芯片组（骁龙处理器）而开发的内核项目</p>
+<p>msm 内核项目是 Google 公司针对高通msm移动芯片组（骁龙处理器）而开发的内核项目
+我们可以在设置 &gt; 关于手机 &gt; 内核版本 中直接查看内核版本信息，也可以通过cat /proc/version 命令查看。内核版本信息的格式为 kernel version-gXXXXXXX,其中 XXXXXXX部分的值是git提交中的 short commit id的值
+在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e</code> 为下载对应版本的源码。</p>
 
-<p>我们可以在设置 &gt; 关于手机 &gt; 内核版本 中直接查看内核版本信息，也可以通过cat /proc/version 命令查看。内核版本信息的格式为 kernel version-gXXXXXXX,其中 XXXXXXX部分的值是git提交中的 short commit id的值</p>
-
-<p>在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e</code> 为下载对应版本的源码。</p>
-
-<h2 id="修改-kernel-源码中-makefile">修改 kernel 源码中 Makefile</h2>
+<h3 id="修改-kernel-源码中-makefile">修改 kernel 源码中 Makefile</h3>
 
 <p>将 msm 目录下的 Makefile 文件中 ARCH 和 CROSS_COPMPILE 修改为如下
 Mac路径</p>
@@ -251,25 +258,21 @@ Liunx 路径设置</p>
 CROSS_COMPILE	?= /home/ivan/android_nexus6p/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 </code></pre>
 
-<h2 id="开始编译内核">开始编译内核</h2>
+<h3 id="开始编译内核">开始编译内核</h3>
 
 <pre><code>make  angler_defconfig
 make
 </code></pre>
 
-<p>编译完成后，生成的 Image.gz-dtb 在 <code>arch/arm64/boot/Image.gz-dtb</code>路径下</p>
-
-<p>编译过程中，以下错误都是由于环境未配置好导致的编译错误，以及网上找的解决办法</p>
+<p>编译完成后，生成的 Image.gz-dtb 在 <code>arch/arm64/boot/Image.gz-dtb</code>路径下
+编译过程中，以下错误都是由于环境未配置好导致的编译错误，以及网上找的解决办法</p>
 
 <pre><code>error: 'vdso_offset_sigtramp' undeclared (first use in this function) 
   (void *)(vdso_offset_##name - VDSO_LBASE + (unsigned long)(base)); \ 
-
-
 更改文件 
 更改arch/arm64/kernel/vdso/gen_vdso_offsets.sh脚本 
 中 
 's/^\([0-9a-fA-F]*\) . VDSO_\([a-zA-Z0-9_]*\)$/\#define vdso_offset_\2\t0x\1/p'
-
 改为
 's/^\([0-9a-fA-F]*\) . VDSO_\([a-zA-Z0-9_]*\)$/\#define vdso_offset_\2  0x\1/p'
 </code></pre>
@@ -280,11 +283,10 @@ make
 
 <pre><code>http://stackoverflow.com/questions/10018764/building-linux-kernel-on-mac-os-x
 https://forum.xda-developers.com/android/help/failed-to-build-arm64-goldfish-kernel-t3342461
-
 http://lukeat.me/2017/03/20/Build-Android-Kernel-of-ARM64-on-OS-X/
 </code></pre>
 
-<h2 id="生成boot-img镜像">生成boot.img镜像</h2>
+<h3 id="生成boot-img镜像">生成boot.img镜像</h3>
 
 <p>在路径 kernel\msm\arch\arm64\boot 中将编译生成的 Image.gz-dtb 复制到Android 源码路径device\huawei\angler-kernel 路径中 nexus6p 的代号为 angler 华为代工，故在以上路径。</p>
 
@@ -314,7 +316,7 @@ make bootimage -j4</p>
 
 <p>编译过程中可能存在的问题：</p>
 
-<h3 id="lunch过程中会出现找不到xcode不支持">lunch过程中会出现找不到xcode不支持，</h3>
+<h4 id="lunch过程中会出现找不到xcode不支持">lunch过程中会出现找不到xcode不支持，</h4>
 
 <p>解决办法就是将mac_sdk_versions_supported改为系统中所装版本
  #mac_sdk_versions_supported := 10.6 10.7 10.8 10.9
@@ -323,29 +325,29 @@ mac_sdk_versions_supported := 10.11</p>
 <p>所以我们需要下载其他的 sdk 放到这个文件夹下面
 我是在这个网站下下的, 没有任何问题 <a href="https://github.com/phracker/MacOSX-SDKs/releases">https://github.com/phracker/MacOSX-SDKs/releases</a></p>
 
-<h3 id="编译过程中会提示头文件定义冲突">编译过程中会提示头文件定义冲突</h3>
+<h4 id="编译过程中会提示头文件定义冲突">编译过程中会提示头文件定义冲突</h4>
 
 <pre><code>external/libcxx/include/cmath:683:46: error: declaration conflicts with target of using declaration already in scope
 </code></pre>
 
 <p>回退到8.3.3</p>
 
-<h3 id="出现error-syscall-的错误">出现error: &lsquo;syscall&rsquo;的错误</h3>
+<h4 id="出现error-syscall-的错误">出现error: &lsquo;syscall&rsquo;的错误</h4>
 
 <p>将xcode回退到8.3.3即可</p>
 
-<h3 id="bison编译错误">bison编译错误</h3>
+<h4 id="bison编译错误">bison编译错误</h4>
 
-<p>[ 85% <sup>2068</sup>&frasl;<sub>2406</sub>] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
-FAILED: /bin/bash -c &ldquo;prebuilts/misc/darwin-x86/bison/bison -d -v &ndash;defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&rdquo;
-[ 85% <sup>2068</sup>&frasl;<sub>2406</sub>] target  C: libcrypto_static &lt;= external/boringssl/src/crypto/ec/p256-64.c
+<pre><code>[ 85% 2068/2406] Yacc: checkpolicy &lt;= external/selinux/checkpolicy/policy_parse.y
+FAILED: /bin/bash -c &quot;prebuilts/misc/darwin-x86/bison/bison -d -v --defines=out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.h -o out/host/darwin-x86/obj/EXECUTABLES/checkpolicy_intermediates/policy_parse.c external/selinux/checkpolicy/policy_parse.y&quot;
+[ 85% 2068/2406] target  C: libcrypto_static &lt;= external/boringssl/src/crypto/ec/p256-64.c
 ninja: build stopped: subcommand failed.
-make: *** [ninja_wrapper] Error 1</p>
+make: *** [ninja_wrapper] Error 1
+</code></pre>
 
 <p>按照如下步骤解决</p>
 
-<pre><code>https://android-review.googlesource.com/c/platform/external/bison/+/517740/1/lib/vasnprintf.c
-
+<pre><code>https://android-review.googlesource.com/c/platform/external/bison/+/517740/1/lib/vasnprintf.c   ---源码Bug
 Patch bison fix for High Sierra and build bison:
 	◦	cd /Volumes/AOSP/external/bison
 	◦	git cherry-pick c0c852bd6fe462b148475476d9124fd740eba160
