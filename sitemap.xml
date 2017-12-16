@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://fanzai.me/post/as-github/</loc>
+    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fanzai.me/post/vs2015-gtest/</loc>
     <lastmod>2017-08-03T00:00:00+00:00</lastmod>
   </url>
@@ -29,6 +34,12 @@
   </url>
   
   <url>
+    <loc>https://fanzai.me/tags/android-studio/</loc>
+    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://fanzai.me/categories/</loc>
     <priority>0</priority>
   </url>
@@ -36,6 +47,12 @@
   <url>
     <loc>https://fanzai.me/tags/gcc/</loc>
     <lastmod>2017-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fanzai.me/tags/github/</loc>
+    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
