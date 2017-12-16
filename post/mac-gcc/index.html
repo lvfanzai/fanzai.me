@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>凡仔</title>
+  <title>Mac 使用gcc编译c语言</title>
 
   
   
@@ -16,14 +16,20 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="" />
+  <meta name="description" content="记录Mac下使用gcc编译c语言小程序步骤。
+
+" />
 
   
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@lvfanzai" />
-  <meta name="twitter:title" content="凡仔" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lvfanzai" />
+    <meta name="twitter:title" content="Mac 使用gcc编译c语言" />
+    <meta name="twitter:description" content="记录Mac下使用gcc编译c语言小程序步骤。
+
+" />
+    <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
+  
 
 
 
@@ -31,7 +37,7 @@
 <meta name="generator" content="Hugo 0.31.1" />
 
 
-<link rel="canonical" href="https://fanzai.me/" />
+<link rel="canonical" href="https://fanzai.me/post/mac-gcc/" />
 <link rel="alternative" href="https://fanzai.me/index.xml" title="凡仔" type="application/atom+xml" />
 
 
@@ -66,6 +72,8 @@
 
 
 
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
 <link rel="stylesheet" href="https://fanzai.me/css/bundle.css" />
 
 
@@ -93,13 +101,15 @@
     <div class="suspension">
       <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
       
+        
+      
     </div>
     
     
   <header class="site-header">
   <img class="avatar" src="https://avatars0.githubusercontent.com/u/13600881" alt="Avatar">
   
-  <h1 class="title">凡仔</h1>
+  <h2 class="title">凡仔</h2>
   
   <p class="subtitle"></p>
   <button class="menu-toggle" type="button">
@@ -114,9 +124,9 @@
       
         <li class="menu-item
             
+            
+            
               is-active
-            
-            
             ">
             <a href="https://fanzai.me/">Home</a>
           </li>
@@ -189,57 +199,73 @@
   </nav>
 </header>
 
-  <section class="main post-list">
-    <header class="list-header offscreen">
-      <h2 class="list-label">All Posts</h2>
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Mac 使用gcc编译c语言</h1>
+      <p class="post-meta">@凡仔 · Aug 2, 2017 · 1 min read</p>
     </header>
+    <article class="post-content"><p>记录Mac下使用gcc编译c语言小程序步骤。</p>
+
+<p></p>
+
+<h2 id="1-编辑好源文件">1. 编辑好源文件</h2>
+
+<h2 id="2-在当前目录下打开terminal-执行gcc-a-c会生成a-out">2. 在当前目录下打开terminal，执行gcc a.c会生成a.out</h2>
+
+<h2 id="3-运行a-out即可">3. 运行a.out即可</h2>
+
+<h2 id="4">4.</h2>
+
+<p>执行时，显示执行时间，使用time命令：
+time ./a.out</p>
+
+<h2 id="5">5.</h2>
+
+<p>还可以通过使用选项-o来改变编译后的文件名，如使用下面的命令行，可以把a.out给成result:
+./result
+gcc -o result test.c
+这个时候，执行新命名的文件：</p>
+
+<p>-c选项：只把源代码（.c文件）编译成目标代码（.o文件），但跳过连接一步。它能使编译多个C程序时的速度更快且更加容易管理。默认时，gcc建立的目标代码文件只有一个.o的扩展名。
+gcc -c test.c</p>
+
+<h2 id="附录">附录</h2>
+
+<p>man命令分页</p>
+
+<p>man命令总共分为8页</p>
+
+<p>Man1 一般命令，linux常见的命令，例如cat ls等</p>
+
+<p>Man2 内核提供的系统调用或者函数。例如man 2 fork等</p>
+
+<p>Man3  c库函数</p>
+
+<p>Man4  特殊文件，例如设备或者驱动程序</p>
+
+<p>Man5 文件格式。包括完全使用文本配置文件定制系统的操作，大量的配置文 件，网络服务列表，可用的shell列表等等</p>
+
+<p>Man6 游戏和屏幕保护程序</p>
+
+<p>Man7 杂类文件</p>
+
+<p>Man8 系统管理命令，超级用户可能需要用到它们。</p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://fanzai.me/tags/mac"><span class="tag">Mac</span></a></li>
+        
+          <li><a href="https://fanzai.me/tags/gcc"><span class="tag">Gcc</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        Copyright © 2017, 凡仔This post was published <strong>136</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
     
-    
       
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/mac-gcc/" class="post-link">Mac 使用gcc编译c语言</a></h3>
-    <p class="post-meta">@凡仔 · Aug 2, 2017 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">记录Mac下使用gcc编译c语言小程序步骤。
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/mac-gcc/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/linux-cmd/" class="post-link">linux 命令</a></h3>
-    <p class="post-meta">@凡仔 · Aug 1, 2017 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">记录开发过程中用到的 linux 命令
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/linux-cmd/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/android-kernel/" class="post-link">Android 源码下载、编译、调试、烧写</a></h3>
-    <p class="post-meta">@凡仔 · Jul 30, 2017 · 2 min read</p>
-  </header>
-  
-  <p class="post-summary">Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:
- 阅读，查阅； 编译调测制作对应手机 root 包； 编译定制对应手机 ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 </p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/android-kernel/">Read More →</a>
-  </footer>
-</article>
-
-      
-    
     
   </section>
   <footer class="site-footer">
@@ -249,6 +275,30 @@
 </footer>
 
 
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
 
 <script src="https://fanzai.me/js/bundle.js"></script>
 
