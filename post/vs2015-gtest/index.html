@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>Visual Studio 2015中使用gtest</title>
+  <title>Visual Studio 2015 中使用 gtest</title>
 
   
   
@@ -16,14 +16,14 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="windows10 Visual Studio 2015中使用gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
+  <meta name="description" content="Win 10 Visual Studio 2015 中使用 gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@lvfanzai" />
-    <meta name="twitter:title" content="Visual Studio 2015中使用gtest" />
-    <meta name="twitter:description" content="windows10 Visual Studio 2015中使用gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
+    <meta name="twitter:title" content="Visual Studio 2015 中使用 gtest" />
+    <meta name="twitter:description" content="Win 10 Visual Studio 2015 中使用 gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -197,25 +197,25 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Visual Studio 2015中使用gtest</h1>
+      <h1 class="post-title">Visual Studio 2015 中使用 gtest</h1>
       <p class="post-meta">@凡仔 · Aug 3, 2017 · 1 min read</p>
     </header>
-    <article class="post-content"><p>windows10 Visual Studio 2015中使用gtest
+    <article class="post-content"><p>Win 10 Visual Studio 2015 中使用 gtest
 参考文献：
 <a href="http://www.top5solutions.com/google-test-visual-studio-configuration/">http://www.top5solutions.com/google-test-visual-studio-configuration/</a>
 </p>
 
-<h2 id="1-新建-win32-控制台项目工程-并去掉预编译头文件">1. 新建 Win32 控制台项目工程，并去掉预编译头文件</h2>
+<h3 id="1-新建-win32-控制台项目工程-并去掉预编译头文件">1. 新建 Win32 控制台项目工程，并去掉预编译头文件</h3>
 
-<h2 id="2-右键项目名-属性-设置gtest目录-包含gtest目录和include目录">2. 右键项目名，属性，设置gtest目录，包含gtest目录和include目录</h2>
+<h3 id="2-右键项目名-属性-设置gtest目录-包含gtest目录和include目录">2. 右键项目名，属性，设置gtest目录，包含gtest目录和include目录</h3>
 
 <p><img src="https://fanzai.me/images/15134255931125.png" alt="" /></p>
 
-<h2 id="3-在工程源文件夹中添加gtest-main-cc和gtest-all-cc">3. 在工程源文件夹中添加gtest_main.cc和gtest-all.cc</h2>
+<h3 id="3-在工程源文件夹中添加gtest-main-cc和gtest-all-cc">3. 在工程源文件夹中添加gtest_main.cc和gtest-all.cc</h3>
 
 <p><img src="https://fanzai.me/images/15134257284181.png" alt="" /></p>
 
-<h2 id="4-新建testcase-cpp文件-创建testcase">4. 新建testcase.cpp文件，创建testcase</h2>
+<h3 id="4-新建testcase-cpp文件-创建testcase">4. 新建testcase.cpp文件，创建testcase</h3>
 
 <pre><code>#include &lt;limits.h&gt; 
 #include &quot;gtest/gtest.h&quot; 
@@ -230,7 +230,7 @@ TEST_F(MultiplyTest, findMean)
 }
 </code></pre>
 
-<h2 id="5-编译成功-开始执行-不调试-即可出现测试结果">5. 编译成功，开始执行(不调试)即可出现测试结果</h2>
+<h3 id="5-编译成功-开始执行-不调试-即可出现测试结果">5. 编译成功，开始执行(不调试)即可出现测试结果</h3>
 
 <p><img src="https://fanzai.me/images/15134258138831.png" alt="" /></p></article>
     <footer class="post-footer">

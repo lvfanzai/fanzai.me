@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>Visual Studio 2015中使用gtest</title>
+      <title>Visual Studio 2015 中使用 gtest</title>
       <link>https://fanzai.me/post/vs2015-gtest/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/post/vs2015-gtest/</guid>
-      <description>&lt;p&gt;windows10 Visual Studio 2015中使用gtest
+      <description>&lt;p&gt;Win 10 Visual Studio 2015 中使用 gtest
 参考文献：
 &lt;a href=&#34;http://www.top5solutions.com/google-test-visual-studio-configuration/&#34;&gt;http://www.top5solutions.com/google-test-visual-studio-configuration/&lt;/a&gt;
 &lt;/p&gt;</description>
