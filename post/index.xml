@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>Copyright © 2017, 凡仔</copyright>
-    <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fanzai.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Visual Studio 2015中使用gtest</title>
+      <link>https://fanzai.me/post/vs2015-gtest/</link>
+      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/vs2015-gtest/</guid>
+      <description>&lt;p&gt;windows Visual Studio 2015中使用gtest
+参考文献：
+&lt;a href=&#34;http://www.top5solutions.com/google-test-visual-studio-configuration/&#34;&gt;http://www.top5solutions.com/google-test-visual-studio-configuration/&lt;/a&gt;
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MacOS 使用 gcc 编译C程序</title>
@@ -21,18 +33,6 @@
       <description>&lt;p&gt;记录MacOS下使用gcc编译C程序步骤。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Visual Studio 2015中使用gtest</title>
-      <link>https://fanzai.me/post/vs2015-gtest/</link>
-      <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://fanzai.me/post/vs2015-gtest/</guid>
-      <description>&lt;p&gt;windows Visual Studio 2015中使用gtest
-参考文献：
-&lt;a href=&#34;http://www.top5solutions.com/google-test-visual-studio-configuration/&#34;&gt;http://www.top5solutions.com/google-test-visual-studio-configuration/&lt;/a&gt;
-&lt;/p&gt;</description>
     </item>
     
     <item>
