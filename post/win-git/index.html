@@ -5,10 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>
-  Posts
-   | 凡仔
-</title>
+  <title>Windows 下使用 git 上传项目到 github</title>
 
   
   
@@ -19,14 +16,18 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="" />
+  <meta name="description" content="Windows 中上传工程到github
+
+" />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@lvfanzai" />
-    <meta name="twitter:title" content="Posts" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="Windows 下使用 git 上传项目到 github" />
+    <meta name="twitter:description" content="Windows 中上传工程到github
+
+" />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -36,7 +37,7 @@
 <meta name="generator" content="Hugo 0.31.1" />
 
 
-<link rel="canonical" href="https://fanzai.me/post/" />
+<link rel="canonical" href="https://fanzai.me/post/win-git/" />
 <link rel="alternative" href="https://fanzai.me/index.xml" title="凡仔" type="application/atom+xml" />
 
 
@@ -99,6 +100,8 @@
     
     <div class="suspension">
       <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
       
     </div>
     
@@ -196,100 +199,66 @@
   </nav>
 </header>
 
-  <section class="main post-list">
-    <header class="list-header offscreen">
-      <h2 class="list-label">Posts List</h2>
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Windows 下使用 git 上传项目到 github</h1>
+      <p class="post-meta">@凡仔 · Sep 4, 2016 · 1 min read</p>
     </header>
+    <article class="post-content"><p>Windows 中上传工程到github</p>
+
+<p></p>
+
+<h3 id="1-确定好需要上传的文件夹">1. 确定好需要上传的文件夹</h3>
+
+<h3 id="2-cmd命令-切换到当前目录">2. cmd命令，切换到当前目录</h3>
+
+<h3 id="3-git-init创建空git仓">3. git init创建空git仓</h3>
+
+<h3 id="4-在windows中打开git-bash-在用户主目录下">4. 在windows中打开git bash，在用户主目录下</h3>
+
+<p>创建SSH key
+$ ssh-keygen -t rsa -C &rdquo;**<strong>@</strong>.com&rdquo;
+根据你的email来替换引号中的邮箱
+一路回车，运行成功后会生成id_rsa是私钥，而id_rsa.pub是公钥，可以公开</p>
+
+<h3 id="5-上github-将id-rsa-pub文件的内容添加到ssh-key中">5. 上github ,将id_rsa.pub文件的内容添加到SSH Key中。</h3>
+
+<h3 id="6-顺手在github中创建一个仓">6. 顺手在github中创建一个仓</h3>
+
+<h3 id="7-打开git-gui进行操作">7. 打开git gui进行操作</h3>
+
+<p><img src="https://fanzai.me/images/15134325492482.png" alt="" />
+打开存在的仓
+定位到确定要上传的文件夹 ，比如我需要上传libalgo目录下的代码，选择如上图。</p>
+
+<h3 id="8-commit-提示-输入刚刚在github上新建的仓-链接本地和远程仓">8. commit,提示，输入刚刚在github上新建的仓，链接本地和远程仓</h3>
+
+<p><a href="https://github.com/lvfanzai/libalgo.git">https://github.com/lvfanzai/libalgo.git</a>
+<img src="https://fanzai.me/images/15134326232576.png" alt="" /></p>
+
+<h3 id="9-上传-push">9. 上传，push</h3>
+
+<p><img src="https://fanzai.me/images/15134326617894.png" alt="" /></p>
+
+<h3 id="10-命令行操作">10. 命令行操作</h3>
+
+<p><img src="https://fanzai.me/images/15134326995905.png" alt="" /></p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://fanzai.me/tags/windows"><span class="tag">Windows</span></a></li>
+        
+          <li><a href="https://fanzai.me/tags/github"><span class="tag">Github</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        Copyright © 2017, 凡仔This post was published <strong>468</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
     
-    
       
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/mac-gcc/" class="post-link">MacOS 使用 gcc 编译C程序</a></h3>
-    <p class="post-meta">@凡仔 · Aug 2, 2017 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">记录MacOS下使用gcc编译C程序步骤。
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/mac-gcc/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/android-kernel/" class="post-link">Android 源码下载、编译、调试、烧写</a></h3>
-    <p class="post-meta">@凡仔 · May 30, 2017 · 2 min read</p>
-  </header>
-  
-  <p class="post-summary">Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:
- 阅读，查阅； 编译调测制作对应手机 root 包； 编译定制对应手机 ROM；  其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。 </p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/android-kernel/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/linux-cmd/" class="post-link">Linux 命令</a></h3>
-    <p class="post-meta">@凡仔 · Nov 1, 2016 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">记录开发过程中用到的 linux 命令
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/linux-cmd/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/win-git/" class="post-link">Windows 下使用 git 上传项目到 github</a></h3>
-    <p class="post-meta">@凡仔 · Sep 4, 2016 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">Windows 中上传工程到github
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/win-git/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/as-github/" class="post-link">Android Studio上传工程到github</a></h3>
-    <p class="post-meta">@凡仔 · Aug 4, 2016 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">Android Studio上传工程到github
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/as-github/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/vs2015-gtest/" class="post-link">Visual Studio 2015 中使用 gtest</a></h3>
-    <p class="post-meta">@凡仔 · Jul 3, 2016 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">Win 10 Visual Studio 2015 中使用 gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ </p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/vs2015-gtest/">Read More →</a>
-  </footer>
-</article>
-
-      
-    
     
   </section>
   <footer class="site-footer">

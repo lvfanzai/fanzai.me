@@ -7,33 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>Copyright © 2017, 凡仔</copyright>
-    <lastBuildDate>Fri, 04 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fanzai.me/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Android Studio上传工程到github</title>
-      <link>https://fanzai.me/post/as-github/</link>
-      <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://fanzai.me/post/as-github/</guid>
-      <description>&lt;p&gt;Android Studio上传工程到github&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Visual Studio 2015 中使用 gtest</title>
-      <link>https://fanzai.me/post/vs2015-gtest/</link>
-      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://fanzai.me/post/vs2015-gtest/</guid>
-      <description>&lt;p&gt;Win 10 Visual Studio 2015 中使用 gtest
-参考文献：
-&lt;a href=&#34;http://www.top5solutions.com/google-test-visual-studio-configuration/&#34;&gt;http://www.top5solutions.com/google-test-visual-studio-configuration/&lt;/a&gt;
-&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>MacOS 使用 gcc 编译C程序</title>
@@ -47,18 +24,9 @@
     </item>
     
     <item>
-      <title>Linux 命令</title>
-      <link>https://fanzai.me/post/linux-cmd/</link>
-      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://fanzai.me/post/linux-cmd/</guid>
-      <description>&lt;p&gt;记录开发过程中用到的 linux 命令&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Android 源码下载、编译、调试、烧写</title>
       <link>https://fanzai.me/post/android-kernel/</link>
-      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/post/android-kernel/</guid>
       <description>&lt;p&gt;Android 源码由 Google 管理，下载源码之前请先明确自己下载源码的目的，总结下，总共有如下几种:&lt;/p&gt;
@@ -71,6 +39,49 @@
 
 &lt;p&gt;其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
  &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 命令</title>
+      <link>https://fanzai.me/post/linux-cmd/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/linux-cmd/</guid>
+      <description>&lt;p&gt;记录开发过程中用到的 linux 命令&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows 下使用 git 上传项目到 github</title>
+      <link>https://fanzai.me/post/win-git/</link>
+      <pubDate>Sun, 04 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/win-git/</guid>
+      <description>&lt;p&gt;Windows 中上传工程到github&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Studio上传工程到github</title>
+      <link>https://fanzai.me/post/as-github/</link>
+      <pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/as-github/</guid>
+      <description>&lt;p&gt;Android Studio上传工程到github&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio 2015 中使用 gtest</title>
+      <link>https://fanzai.me/post/vs2015-gtest/</link>
+      <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/vs2015-gtest/</guid>
+      <description>&lt;p&gt;Win 10 Visual Studio 2015 中使用 gtest
+参考文献：
+&lt;a href=&#34;http://www.top5solutions.com/google-test-visual-studio-configuration/&#34;&gt;http://www.top5solutions.com/google-test-visual-studio-configuration/&lt;/a&gt;
+&lt;/p&gt;</description>
     </item>
     
   </channel>

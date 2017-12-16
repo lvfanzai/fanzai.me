@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>Copyright © 2017, 凡仔</copyright>
-    <lastBuildDate>Thu, 03 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jul 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fanzai.me/tags/gtest/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Visual Studio 2015 中使用 gtest</title>
       <link>https://fanzai.me/post/vs2015-gtest/</link>
-      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/post/vs2015-gtest/</guid>
       <description>&lt;p&gt;Win 10 Visual Studio 2015 中使用 gtest
