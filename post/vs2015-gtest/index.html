@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>Linux 命令</title>
+  <title>Visual Studio 2015中使用gtest</title>
 
   
   
@@ -16,16 +16,14 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="记录开发过程中用到的 linux 命令
-" />
+  <meta name="description" content="windows Visual Studio 2015中使用gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@lvfanzai" />
-    <meta name="twitter:title" content="Linux 命令" />
-    <meta name="twitter:description" content="记录开发过程中用到的 linux 命令
-" />
+    <meta name="twitter:title" content="Visual Studio 2015中使用gtest" />
+    <meta name="twitter:description" content="windows Visual Studio 2015中使用gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -35,7 +33,7 @@
 <meta name="generator" content="Hugo 0.31.1" />
 
 
-<link rel="canonical" href="https://fanzai.me/post/linux-cmd/" />
+<link rel="canonical" href="https://fanzai.me/post/vs2015-gtest/" />
 <link rel="alternative" href="https://fanzai.me/index.xml" title="凡仔" type="application/atom+xml" />
 
 
@@ -199,35 +197,54 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Linux 命令</h1>
-      <p class="post-meta">@凡仔 · Aug 1, 2017 · 1 min read</p>
+      <h1 class="post-title">Visual Studio 2015中使用gtest</h1>
+      <p class="post-meta">@凡仔 · Aug 2, 2017 · 1 min read</p>
     </header>
-    <article class="post-content"><p>记录开发过程中用到的 linux 命令</p>
+    <article class="post-content"><p>windows Visual Studio 2015中使用gtest
+参考文献：
+<a href="http://www.top5solutions.com/google-test-visual-studio-configuration/">http://www.top5solutions.com/google-test-visual-studio-configuration/</a>
+</p>
 
-<p>
-find -name hello.c 查找当前目录下名为hello.c的档案</p>
+<h2 id="1-新建-win32-控制台项目工程-并去掉预编译头文件">1. 新建 Win32 控制台项目工程，并去掉预编译头文件</h2>
 
-<p>Find /path -name &ldquo;*.log&rdquo; 查找path路径下所有后缀为log的文件</p>
+<h2 id="2-右键项目名-属性-设置gtest目录-包含gtest目录和include目录">2. 右键项目名，属性，设置gtest目录，包含gtest目录和include目录</h2>
 
-<p>find ./ -size +10M 查找计算机中当前目录下大于10MB的文档</p>
+<p><img src="https://fanzai.me/images/15134255931125.png" alt="" /></p>
 
-<p>cat -n 文件   显示行号，包括空白行
-cat -b 文件   显示行号，不包括空白行</p>
+<h2 id="3-在工程源文件夹中添加gtest-main-cc和gtest-all-cc">3. 在工程源文件夹中添加gtest_main.cc和gtest-all.cc</h2>
 
-<p>readelf -a 查看库信息</p>
+<p><img src="https://fanzai.me/images/15134257284181.png" alt="" /></p>
 
-<p>du -h &ndash;max-depth=1 
-du -h &ndash;max-depth=1 /usr 查看文件夹大小</p></article>
+<h2 id="4-新建testcase-cpp文件-创建testcase">4. 新建testcase.cpp文件，创建testcase</h2>
+
+<pre><code>#include &lt;limits.h&gt; 
+#include &quot;gtest/gtest.h&quot; 
+#include &quot;libalgo.h&quot; 
+class MultiplyTest : public testing::Test { 
+};
+TEST_F(MultiplyTest, findMean)
+{
+       int a; 
+       a = print_test();
+       EXPECT_EQ(0, a);
+}
+</code></pre>
+
+<h2 id="5-编译成功-开始执行-不调试-即可出现测试结果">5. 编译成功，开始执行(不调试)即可出现测试结果</h2>
+
+<p><img src="https://fanzai.me/images/15134258138831.png" alt="" /></p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
         
-          <li><a href="https://fanzai.me/tags/linux-cmd"><span class="tag">Linux Cmd</span></a></li>
+          <li><a href="https://fanzai.me/tags/vs2015"><span class="tag">VS2015</span></a></li>
+        
+          <li><a href="https://fanzai.me/tags/gtest"><span class="tag">Gtest</span></a></li>
         
       </ul>
       
       <p class="post-copyright">
-        Copyright © 2017, 凡仔This post was published <strong>137</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        Copyright © 2017, 凡仔This post was published <strong>136</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
       </p>
     </footer>
     

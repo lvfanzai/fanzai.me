@@ -31,6 +31,15 @@
     </item>
     
     <item>
+      <title>Gtest</title>
+      <link>https://fanzai.me/tags/gtest/</link>
+      <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/gtest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kernel</title>
       <link>https://fanzai.me/tags/kernel/</link>
       <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
@@ -49,11 +58,20 @@
     </item>
     
     <item>
-      <title>Mac</title>
-      <link>https://fanzai.me/tags/mac/</link>
+      <title>Macos</title>
+      <link>https://fanzai.me/tags/macos/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://fanzai.me/tags/mac/</guid>
+      <guid>https://fanzai.me/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vs2015</title>
+      <link>https://fanzai.me/tags/vs2015/</link>
+      <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/vs2015/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gtest on 凡仔</title>
+    <link>https://fanzai.me/tags/gtest/</link>
+    <description>Recent content in Gtest on 凡仔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>Copyright © 2017, 凡仔</copyright>
+    <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fanzai.me/tags/gtest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visual Studio 2015中使用gtest</title>
+      <link>https://fanzai.me/post/vs2015-gtest/</link>
+      <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/vs2015-gtest/</guid>
+      <description>&lt;p&gt;windows Visual Studio 2015中使用gtest
+参考文献：
+&lt;a href=&#34;http://www.top5solutions.com/google-test-visual-studio-configuration/&#34;&gt;http://www.top5solutions.com/google-test-visual-studio-configuration/&lt;/a&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
