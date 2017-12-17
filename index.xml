@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>Copyright © 2017, 凡仔</copyright>
-    <lastBuildDate>Wed, 02 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fanzai.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>静态库和动态库编译</title>
+      <link>https://fanzai.me/post/linux-lib/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/linux-lib/</guid>
+      <description>&lt;p&gt;记录动态库so 和静态库lib编译，Makefile， Android.mk技巧。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MacOS 使用 gcc 编译C程序</title>
@@ -127,30 +138,6 @@
 参考文献：
 &lt;a href=&#34;http://www.top5solutions.com/google-test-visual-studio-configuration/&#34;&gt;http://www.top5solutions.com/google-test-visual-studio-configuration/&lt;/a&gt;
 &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://fanzai.me/post/linux-lib/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fanzai.me/post/linux-lib/</guid>
-      <description>&lt;h1 id=&#34;toc_0&#34;&gt;&amp;mdash;&lt;/h1&gt;
-
-&lt;p&gt;title: &amp;ldquo;静态库和动态库编译&amp;rdquo;
-date: 2017-11-30
-tags:
-  - 动态库
-  - 静态库
-  - Android.mk
-  - Makefile
-typora-root-url: ../&lt;/p&gt;
-
-&lt;h2 id=&#34;typora-copy-images-to-images&#34;&gt;typora-copy-images-to: ../images&lt;/h2&gt;
-
-&lt;p&gt;记录动态库so 和静态库lib编译，Makefile， Android.mk技巧。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
