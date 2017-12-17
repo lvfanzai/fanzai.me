@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>Copyright © 2017, 凡仔</copyright>
-    <lastBuildDate>Tue, 30 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fanzai.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Addr2line</title>
+      <link>https://fanzai.me/tags/addr2line/</link>
+      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/addr2line/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android</title>
@@ -36,6 +45,15 @@
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/gcc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gdb</title>
+      <link>https://fanzai.me/tags/gdb/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/gdb/</guid>
       <description></description>
     </item>
     
@@ -72,6 +90,15 @@
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://fanzai.me/tags/linux/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/linux/</guid>
       <description></description>
     </item>
     

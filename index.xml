@@ -24,6 +24,17 @@
     </item>
     
     <item>
+      <title>Linux gdb 调试方法</title>
+      <link>https://fanzai.me/post/linux-gdb/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/linux-gdb/</guid>
+      <description>&lt;p&gt;记录Linux gdb 调试方法。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Android 源码下载、编译、调试、烧写</title>
       <link>https://fanzai.me/post/android-kernel/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
@@ -39,6 +50,17 @@
 
 &lt;p&gt;其中第2，3可以归纳为同一个目的，下载源码并编译在手机运行。
  &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android addr2line 调试方法</title>
+      <link>https://fanzai.me/post/addr2line/</link>
+      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/addr2line/</guid>
+      <description>&lt;p&gt;记录Android addr2line 调试方法。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
