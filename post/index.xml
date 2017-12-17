@@ -96,6 +96,17 @@
     </item>
     
     <item>
+      <title>Linux spi 驱动</title>
+      <link>https://fanzai.me/post/linux-spi/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/linux-spi/</guid>
+      <description>&lt;p&gt;Linux spi 驱动使用笔记。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Windows 下使用 git 上传项目到 github</title>
       <link>https://fanzai.me/post/win-git/</link>
       <pubDate>Sun, 04 Sep 2016 00:00:00 +0000</pubDate>
