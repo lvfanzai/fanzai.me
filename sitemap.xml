@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>https://fanzai.me/post/linux-gdb/</loc>
+    <loc>https://fanzai.me/post/macos-gdb/</loc>
     <lastmod>2017-07-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -131,12 +131,6 @@
   <url>
     <loc>https://fanzai.me/tags/linux-cmd/</loc>
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://fanzai.me/tags/mac/</loc>
-    <lastmod>2017-07-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

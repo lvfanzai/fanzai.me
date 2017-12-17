@@ -5,11 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>
-  Tag → gdb
-  
-   | 凡仔
-</title>
+  <title>MacOS gdb 调试方法</title>
 
   
   
@@ -20,14 +16,20 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="" />
+  <meta name="description" content="记录MacOS gdb 调试方法。
+
+" />
 
   
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@lvfanzai" />
-  <meta name="twitter:title" content="凡仔" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lvfanzai" />
+    <meta name="twitter:title" content="MacOS gdb 调试方法" />
+    <meta name="twitter:description" content="记录MacOS gdb 调试方法。
+
+" />
+    <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
+  
 
 
 
@@ -35,7 +37,7 @@
 <meta name="generator" content="Hugo 0.31.1" />
 
 
-<link rel="canonical" href="https://fanzai.me/tags/gdb/" />
+<link rel="canonical" href="https://fanzai.me/post/macos-gdb/" />
 <link rel="alternative" href="https://fanzai.me/index.xml" title="凡仔" type="application/atom+xml" />
 
 
@@ -99,6 +101,8 @@
     <div class="suspension">
       <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
       
+        
+      
     </div>
     
     
@@ -121,6 +125,8 @@
         <li class="menu-item
             
             
+            
+              is-active
             ">
             <a href="https://fanzai.me/">Home</a>
           </li>
@@ -193,29 +199,101 @@
   </nav>
 </header>
 
-  <section class="main post-list">
-    <header class="list-header offscreen">
-      <h2 class="list-label">Posts List</h2>
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">MacOS gdb 调试方法</h1>
+      <p class="post-meta">@凡仔 · Jul 29, 2017 · 1 min read</p>
     </header>
-    
+    <article class="post-content"><p>记录MacOS gdb 调试方法。</p>
+
+<p></p>
+
+<h3 id="1-安装gdb">1. 安装gdb</h3>
+
+<p>brew search brew
+如果有输出gdb后有对勾，说明gdb已经安装好。</p>
+
+<h3 id="2-gdb-鉴权">2. gdb 鉴权</h3>
+
+<p>参考链接
+<a href="http://blog.csdn.net/cairo123/article/details/52054280">http://blog.csdn.net/cairo123/article/details/52054280</a></p>
+
+<h3 id="3-编写一段-c-程序">3. 编写一段 C 程序</h3>
+
+<p>以下此段程序的作用是求0-99999这10万个数字中7出现的次数。命名为num_sum.c
+当然还有另外利用概率的办法的最优解。</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+int main(int argc, char const *argv[]) {
+  int i, j;
+  int count = 0;
+  for (i = 0; i &lt; 100000; i++) {
+    /* code */
+    for (j = i; j != 0; j = j / 10) {
+      /* code */
+      if (j % 10 == 7) {
+        printf(&quot;%d\n&quot;, i);
+        count++;
+      }
+    }
+  }
+  printf(&quot;%d\n&quot;, count);
+  return 0;
+}
+</code></pre>
+
+<h3 id="4-编译出可执行程序">4. 编译出可执行程序</h3>
+
+<p>gcc -g -o num_sum num_sum.c
+注意-g参数很重要，生成gdb调试信息</p>
+
+<h3 id="5-开始调试">5. 开始调试</h3>
+
+<p>gdb num_sum
+run &mdash;程序会从头跑到尾，跑完。
+如果直接run会提示如下错误
+During startup program terminated with signal ?, Unknown signal.
+解决办法：
+Create a .gdbinit file in your home-direcetory and write &ldquo;set startup-with-shell off&rdquo; in it.
+File can be created using vim ~/.gdbinit.
+总结一句话就是在cd目录下，新建.gdbinit文件，写入set startup-with-shell off信息，重新开始调试。</p>
+
+<h3 id="6-断点调试">6. 断点调试</h3>
+
+<p>如下命令：
+(gdb) b fun_a //对某个函数入口处打断点
+(gdb) b filename:lineno  //对某个文件某行打断点
+(gdb) i b //查所有断点信息
+(gdb) d n //删除某个断点</p>
+
+<h3 id="7-查看调试信息">7. 查看调试信息</h3>
+
+<p>(gdb) list //查看当前运行的代码
+(gdb) p var //查看某个变量
+(gdb) p *var //查看某个指针所指向的内容
+(gdb) bt      //查看调用堆栈，core dump时特别有用</p>
+
+<h3 id="8-单步调试">8. 单步调试</h3>
+
+<p>(gdb) s //单步执行step into 遇到函数会跳入
+(gdb) n //单步执行step over，遇到函数不会跳入
+(gdb) c //继续运行resume</p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://fanzai.me/tags/macos"><span class="tag">MacOS</span></a></li>
+        
+          <li><a href="https://fanzai.me/tags/gdb"><span class="tag">Gdb</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        Copyright © 2017, 凡仔This post was published <strong>141</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
     
       
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/macos-gdb/" class="post-link">MacOS gdb 调试方法</a></h3>
-    <p class="post-meta">@凡仔 · Jul 29, 2017 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">记录MacOS gdb 调试方法。
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/macos-gdb/">Read More →</a>
-  </footer>
-</article>
-
-      
-    
     
   </section>
   <footer class="site-footer">
