@@ -48,6 +48,10 @@
   </url>
   
   <url>
+    <loc>https://fanzai.me/post/linux-lib/</loc>
+  </url>
+  
+  <url>
     <loc>https://fanzai.me/tags/addr2line/</loc>
     <lastmod>2017-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
