@@ -379,7 +379,17 @@ Patch bison fix for High Sierra and build bison:
 
 <p>参考链接：</p>
 
-<p><a href="https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ">https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ</a></p></article>
+<p><a href="https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ">https://groups.google.com/forum/#!searchin/android-building/prebuilts$2Fmisc$2Fdarwin-x86$2Fbison$2Fbison|sort:date/android-building/D1-c5lZ9Oco/h2kAzh7SAwAJ</a></p>
+
+<h3 id="七-编译单模块">七. 编译单模块</h3>
+
+<p>修改了FingerprintManager源码，如下路径
+frameworks\base\core\java\android\hardware
+配置好环境后执行：make framework</p>
+
+<p>修改了FingerprintServices，如下路径
+frameworks\base\services\core\java\com\android\server\fingerprint
+配置好环境后编译命令：make services</p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
