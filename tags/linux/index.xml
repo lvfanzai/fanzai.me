@@ -24,12 +24,12 @@
     </item>
     
     <item>
-      <title>Linux spi 驱动</title>
+      <title>Linux 内核 spi 驱动编写</title>
       <link>https://fanzai.me/post/linux-spi/</link>
       <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/post/linux-spi/</guid>
-      <description>&lt;p&gt;Linux spi 驱动使用笔记。&lt;/p&gt;
+      <description>&lt;p&gt;Linux 内核 spi 驱动编写笔记。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
