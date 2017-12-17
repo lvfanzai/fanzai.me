@@ -5,10 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>
-  Posts
-   | 凡仔
-</title>
+  <title>指纹知识介绍</title>
 
   
   
@@ -19,14 +16,18 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="" />
+  <meta name="description" content="指纹知识介绍
+
+" />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@lvfanzai" />
-    <meta name="twitter:title" content="Posts" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="指纹知识介绍" />
+    <meta name="twitter:description" content="指纹知识介绍
+
+" />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -36,7 +37,7 @@
 <meta name="generator" content="Hugo 0.31.1" />
 
 
-<link rel="canonical" href="https://fanzai.me/post/" />
+<link rel="canonical" href="https://fanzai.me/post/fingerprint/" />
 <link rel="alternative" href="https://fanzai.me/index.xml" title="凡仔" type="application/atom+xml" />
 
 
@@ -99,6 +100,8 @@
     
     <div class="suspension">
       <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
       
     </div>
     
@@ -196,52 +199,78 @@
   </nav>
 </header>
 
-  <section class="main post-list">
-    <header class="list-header offscreen">
-      <h2 class="list-label">Posts List</h2>
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">指纹知识介绍</h1>
+      <p class="post-meta">@凡仔 · Aug 29, 2016 · 1 min read</p>
     </header>
-    
+    <article class="post-content"><p>指纹知识介绍</p>
+
+<p></p>
+
+<h3 id="1-安全启动">1.安全启动</h3>
+
+<p>从内置独立安全芯片&mdash;&gt;bootrom&mdash;&gt; spl/obm(bootloader stage one)&mdash;&gt; uboot/xxxboot(bootloaderstage two) &mdash;&gt; kernel &mdash;&gt; OS layer + misc APP</p>
+
+<h3 id="2-指纹识别">2.指纹识别</h3>
+
+<p>指纹识别系统是一套包括指纹图像获取、处理、特征提取和比对等模块的模式识别系统</p>
+
+<h3 id="3-指纹识别系统通常包含模块">3.指纹识别系统通常包含模块</h3>
+
+<p>指纹识别系统通常包括以下几部分：
+    •   图像获取：通过专门的指纹采集或扫描仪、数字相机、智能手机等获取指纹图像。根据采集指纹面积大体可以分为滚动捺印指纹和平面捺印指纹，公安行业普遍采用滚动捺印指纹。
+    •   图像压缩：将指纹数据库的图像经过压缩后存储，主要方法为转换为JPEG、WSQ、EZW等文件。目的是减少存储空间。其中，EZW被列入中国公安部刑侦领域指纹图像压缩的国家标准。
+    •   图像处理：指纹区域检测、图像质量判断、方向图和频率估计、图像增强、指纹图像二值化和细化等。
+    •   指纹形态和细节特征提取：获取指纹特征并提取交下一步分析。指纹形态特征包括中心（上、下）和三角点（左、右）等，细节特征点主要包括纹线的起点、终点、结合点和分叉点。
+    •   指纹比对：对比两个以上指纹以分析是否为同一指纹来源</p>
+
+<h3 id="4-指纹图像预处理">4.指纹图像预处理</h3>
+
+<p>指纹图像压缩：
+(1)JEPG：静态图像压缩算法，压缩比较高，失真率较低
+(2)WSQ：自适应的标量量化和小波分解的指纹图像压缩算法，对指纹特征点信息还原效果较好
+(3)EZW：基于嵌入式零树小波的指纹图像数据压缩与恢复方法</p>
+
+<h3 id="5-指纹图像预处理的目的主要是为特征值提取的有效性-准确性作好准备-一般包括如下几个过程">5. 指纹图像预处理的目的主要是为特征值提取的有效性、准确性作好准备。一般包括如下几个过程。</h3>
+
+<p>(1)指纹图像增强：为了减少噪声，增强嵴峪对比度，通常需要设定合适的过滤阈值。
+(2)指纹图像平滑处理：让图像取得均匀一致的明暗效果。
+(3)指纹图像二值化：在实际处理中只需要知道像素是不是嵴线上的点，而无需知道它的灰度。
+(4)指纹图像细化：将嵴的宽度降为单个像素的宽度，得到嵴线的骨架图像。
+<img src="https://fanzai.me/images/15135177372563.png" alt="" /></p>
+
+<h3 id="6-自动指纹识别的过程">6.自动指纹识别的过程</h3>
+
+<p>     指纹识别的过程，包括两个子过程各 4 个阶段点。两个子过程是指纹注册过程和指纹识别过程。
+指纹注册过程包括四个阶段，分别是指纹采集、指纹图像处理、指纹特征值提取及建立指纹模板库。
+指纹识别的过程也经过四个阶段，分别是指纹采集、指纹图像处理、指纹特征值提取和指纹特征值匹配。指纹图像处理在两个子过程中是相同的。但指纹采集和指纹特征值提取，虽然名称相同，但内部算法流程是有区分的。在指纹注册过程中的指纹采集，其采集次数要多。并且其特征值提取环节的算法也多一些对特征点的归纳处理步骤。
+<img src="https://fanzai.me/images/15135177564453.png" alt="" /></p>
+
+<h3 id="7-指纹识别原理">7.指纹识别原理</h3>
+
+<p>     电容传感器根据指纹的嵴和峪与半导体电容感应颗粒形成的电容值大小不同，来判断什么位置是嵴什么位置是峪。其工作过程是通过对每个像素点上的电容感应颗粒预先充电到某一参考电压。当手指接触到半导体电容指纹表面上时，因为嵴是凸起的峪是凹下，根据电容值与距离的关系，会在嵴和峪的地方形成不同的电容值。然后利用放电电流进行放电。因为嵴和峪对应的电容值不同，所以其放电的速度也不同。嵴下的像素(电容量高)放电较慢，而处于峪下的像素(电容量低)放电较快。根据放电率的不同．可以探测到嵴和峪的位置，从而形成指纹图像数据。</p>
+
+<h3 id="附录">附录</h3>
+
+<p>摘自网络。
+     </p></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="https://fanzai.me/tags/fingerprint"><span class="tag">Fingerprint</span></a></li>
+        
+          <li><a href="https://fanzai.me/tags/%E6%8C%87%E7%BA%B9"><span class="tag">指纹</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        Copyright © 2017, 凡仔This post was published <strong>475</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
     
       
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/as-github/" class="post-link">Android Studio上传工程到github</a></h3>
-    <p class="post-meta">@凡仔 · Aug 4, 2016 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">Android Studio上传工程到github
-
-</p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/as-github/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="https://fanzai.me/post/vs2015-gtest/" class="post-link">Visual Studio 2015 中使用 gtest</a></h3>
-    <p class="post-meta">@凡仔 · Jul 3, 2016 · 1 min read</p>
-  </header>
-  
-  <p class="post-summary">Win 10 Visual Studio 2015 中使用 gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ </p>
-  <footer class="post-footer">
-    <a class="read-more" href="https://fanzai.me/post/vs2015-gtest/">Read More →</a>
-  </footer>
-</article>
-
-      
-    
-    
-      <footer class="list-footer">
-        <nav class="pagination">
-          <h3 class="offscreen">Pagination</h3>
-          
-            <a class="pagination-previous" href="https://fanzai.me/post/">← Newer Posts</a>
-          
-          
-        </nav>
-      </footer>
     
   </section>
   <footer class="site-footer">

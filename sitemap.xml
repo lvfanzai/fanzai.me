@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://fanzai.me/post/fingerprint/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fanzai.me/post/as-jni/</loc>
     <lastmod>2016-08-21T00:00:00+00:00</lastmod>
   </url>
@@ -83,6 +88,12 @@
   
   <url>
     <loc>https://fanzai.me/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fanzai.me/tags/fingerprint/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -185,6 +196,12 @@
   <url>
     <loc>https://fanzai.me/tags/%E5%8A%A8%E6%80%81%E5%BA%93/</loc>
     <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fanzai.me/tags/%E6%8C%87%E7%BA%B9/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
