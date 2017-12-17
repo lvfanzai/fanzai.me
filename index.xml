@@ -62,6 +62,17 @@
     </item>
     
     <item>
+      <title>Android Studio 创建 jni 工程</title>
+      <link>https://fanzai.me/post/android-jni/</link>
+      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/android-jni/</guid>
+      <description>&lt;p&gt;记录Android Studio 创建 jni 工程流程。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Android Studio上传工程到github</title>
       <link>https://fanzai.me/post/as-github/</link>
       <pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate>

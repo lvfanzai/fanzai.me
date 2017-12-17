@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://fanzai.me/post/android-jni/</loc>
+    <lastmod>2016-08-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fanzai.me/post/as-github/</loc>
     <lastmod>2016-08-04T00:00:00+00:00</lastmod>
   </url>
@@ -40,7 +45,7 @@
   
   <url>
     <loc>https://fanzai.me/tags/android-studio/</loc>
-    <lastmod>2016-08-04T00:00:00+00:00</lastmod>
+    <lastmod>2016-08-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,6 +69,12 @@
   <url>
     <loc>https://fanzai.me/tags/gtest/</loc>
     <lastmod>2016-07-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fanzai.me/tags/jni/</loc>
+    <lastmod>2016-08-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

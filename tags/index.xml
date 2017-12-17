@@ -24,7 +24,7 @@
     <item>
       <title>Android Studio</title>
       <link>https://fanzai.me/tags/android-studio/</link>
-      <pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/android-studio/</guid>
       <description></description>
@@ -54,6 +54,15 @@
       <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/gtest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jni</title>
+      <link>https://fanzai.me/tags/jni/</link>
+      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/jni/</guid>
       <description></description>
     </item>
     
