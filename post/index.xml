@@ -47,7 +47,9 @@
       <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/post/linux-cmd/</guid>
-      <description>&lt;p&gt;记录开发过程中用到的 linux 命令&lt;/p&gt;</description>
+      <description>&lt;p&gt;记录开发过程中用到的 linux 命令&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,10 +65,10 @@
     
     <item>
       <title>Android Studio 创建 jni 工程</title>
-      <link>https://fanzai.me/post/android-jni/</link>
+      <link>https://fanzai.me/post/as-jni/</link>
       <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://fanzai.me/post/android-jni/</guid>
+      <guid>https://fanzai.me/post/as-jni/</guid>
       <description>&lt;p&gt;记录Android Studio 创建 jni 工程流程。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
