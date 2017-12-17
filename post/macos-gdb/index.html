@@ -261,12 +261,18 @@
 run ---程序会从头跑到尾，跑完。
 </code></pre>
 
-<p>如果直接run会提示如下错误
-During startup program terminated with signal ?, Unknown signal.
-解决办法：
-Create a .gdbinit file in your home-direcetory and write &ldquo;set startup-with-shell off&rdquo; in it.
+<p>如果直接run会提示如下错误</p>
+
+<pre><code>During startup program terminated with signal ?, Unknown signal.
+</code></pre>
+
+<p>解决办法：</p>
+
+<pre><code>Create a .gdbinit file in your home-direcetory and write &quot;set startup-with-shell off&quot; in it.
 File can be created using vim ~/.gdbinit.
-总结一句话就是在cd目录下，新建.gdbinit文件，写入set startup-with-shell off信息，重新开始调试。</p>
+</code></pre>
+
+<p>总结一句话就是在cd目录下，新建.gdbinit文件，写入set startup-with-shell off信息，重新开始调试。</p>
 
 <h3 id="6-断点调试">6. 断点调试</h3>
 
