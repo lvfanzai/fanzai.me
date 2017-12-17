@@ -221,7 +221,7 @@
 <h3 id="3-编写一段-c-程序">3. 编写一段 C 程序</h3>
 
 <p>以下此段程序的作用是求0-99999这10万个数字中7出现的次数。命名为num_sum.c
-当然还有另外利用概率的办法的最优解。</p>
+当然还有另外利用概率方法的最优解。</p>
 
 <pre><code>  1 #include &lt;stdio.h&gt;
   2 void print_hello()
@@ -250,14 +250,18 @@
 
 <h3 id="4-编译出可执行程序">4. 编译出可执行程序</h3>
 
-<p>gcc -g -o num_sum num_sum.c
-注意-g参数很重要，生成gdb调试信息</p>
+<pre><code>gcc -g -o num_sum num_sum.c
+</code></pre>
+
+<p>注意-g参数很重要，生成gdb调试信息</p>
 
 <h3 id="5-开始调试">5. 开始调试</h3>
 
-<p>gdb num_sum
-run &mdash;程序会从头跑到尾，跑完。
-如果直接run会提示如下错误
+<pre><code>gdb num_sum
+run ---程序会从头跑到尾，跑完。
+</code></pre>
+
+<p>如果直接run会提示如下错误
 During startup program terminated with signal ?, Unknown signal.
 解决办法：
 Create a .gdbinit file in your home-direcetory and write &ldquo;set startup-with-shell off&rdquo; in it.
@@ -266,24 +270,28 @@ File can be created using vim ~/.gdbinit.
 
 <h3 id="6-断点调试">6. 断点调试</h3>
 
-<p>如下命令：
-(gdb) b fun_a //对某个函数入口处打断点
+<p>如下命令：</p>
+
+<pre><code>(gdb) b fun_a //对某个函数入口处打断点
 (gdb) b filename:lineno  //对某个文件某行打断点
 (gdb) i b //查所有断点信息
-(gdb) d n //删除某个断点</p>
+(gdb) d n //删除某个断点
+</code></pre>
 
 <h3 id="7-查看调试信息">7. 查看调试信息</h3>
 
-<p>(gdb) list //查看当前运行的代码
+<pre><code>(gdb) list //查看当前运行的代码
 (gdb) p var //查看某个变量
 (gdb) p *var //查看某个指针所指向的内容
-(gdb) bt      //查看调用堆栈，core dump时特别有用</p>
+(gdb) bt      //查看调用堆栈，core dump时特别有用
+</code></pre>
 
 <h3 id="8-单步调试">8. 单步调试</h3>
 
-<p>(gdb) s //单步执行step into 遇到函数会跳入
+<pre><code>(gdb) s //单步执行step into 遇到函数会跳入
 (gdb) n //单步执行step over，遇到函数不会跳入
-(gdb) c //继续运行resume</p></article>
+(gdb) c //继续运行resume
+</code></pre></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
