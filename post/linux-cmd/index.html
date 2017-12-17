@@ -296,7 +296,21 @@ indent -kr -i8 main.c</p>
 <pre><code>git clone -b test ssh://ivan@62.113.205.19:40202/home/ivan/srv/sample.git
 </code></pre>
 
-<h4 id="3-7">3.7</h4></article>
+<h4 id="3-7-linux-挂载-u-盘">3.7 Linux 挂载 U 盘</h4>
+
+<pre><code>mkdir /mnt/udisk 
+mount /dev/sda1 /mnt/udisk/ 
+</code></pre>
+
+<h4 id="3-8-linux-加载和卸载驱动模块">3.8 Linux 加载和卸载驱动模块</h4>
+
+<p>加载模块：insmod ***.ko
+卸载模块：rmmod</p>
+
+<h4 id="3-9-linux-进程信息查询">3.9 Linux 进程信息查询</h4>
+
+<p>dumpsys meminfo |grep touchscreen
+pmap - x <pid>查看进程映射</p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
