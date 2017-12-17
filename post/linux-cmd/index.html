@@ -253,16 +253,28 @@ indent -kr -i8 main.c</p>
 
 <p>删除分支：git branch -d <name></p>
 
-<p>git push &ndash;set-upstream origin test</p>
+<p>本地缓存删除（改变成未track状态）:git rm -r &ndash;cached .</p>
 
-<h4 id="3-1-切换分支">3.1 切换分支</h4>
+<h4 id="3-1-将本地内容上传到github上非master分支方法">3.1 将本地内容上传到github上非master分支方法：</h4>
+
+<p>本地新建分支git checkout -b <name>
+上传：git push -u origin <name>
+此时登录自己的github，可切换到新建的<name>中查看提交</p>
+
+<h4 id="3-2-删除远程分支">3.2 删除远程分支</h4>
+
+<pre><code>git push origin :&lt;name&gt;
+
+</code></pre>
+
+<h4 id="3-3-切换分支">3.3 切换分支</h4>
 
 <p>使用repo将本地代码从master branch转换到指定的branch</p>
 
 <pre><code>repo forall -c git checkout android-7.1.2_r28
 </code></pre>
 
-<h4 id="3-2-每个git仓执行同一个cmd">3.2 每个git仓执行同一个cmd</h4>
+<h4 id="3-4-每个git仓执行同一个cmd">3.4 每个git仓执行同一个cmd</h4>
 
 <p>repo forall -c command
 1.如果仅仅修改了代码，没有commit提交，恢复与服务器相关代码执行</p>
@@ -272,7 +284,21 @@ indent -kr -i8 main.c</p>
 
 <p>2.如果commit了代码，repo sync -c -d即可同步到服务器最新代码，重新新建分支，原来分支上提交还存在</p>
 
-<h4 id="3-3-给代码打tag">3.3 给代码打tag</h4>
+<h4 id="3-5-查看工作区与服务器最新代码差别">3.5 查看工作区与服务器最新代码差别</h4>
+
+<pre><code>git diff HEAD -- readme.txt
+</code></pre>
+
+<h4 id="3-6-查看两条分支差别">3.6 查看两条分支差别</h4>
+
+<p>repo forall -pc &lsquo;git log &ndash;no-merges &ndash;oneline android-7.1.2_r5..android-7.1.2_r6&rsquo; &gt; ~/diff.txt</p>
+
+<h4 id="3-7-克隆服务器上git仓指定的分支">3.7 克隆服务器上git仓指定的分支</h4>
+
+<pre><code>git clone -b test ssh://ivan@62.113.205.19:40202/home/ivan/srv/sample.git
+</code></pre>
+
+<h4 id="3-8-给代码打tag">3.8 给代码打tag</h4>
 
 <pre><code>repo manifest -r -o tag.xml 
 </code></pre>
@@ -282,32 +308,18 @@ indent -kr -i8 main.c</p>
 <pre><code>ln -sf manifests/default.xml manifest.xml
 </code></pre>
 
-<h4 id="3-4-查看工作区与服务器最新代码差别">3.4 查看工作区与服务器最新代码差别</h4>
-
-<pre><code>git diff HEAD -- readme.txt
-</code></pre>
-
-<h4 id="3-5-查看两条分支差别">3.5 查看两条分支差别</h4>
-
-<p>repo forall -pc &lsquo;git log &ndash;no-merges &ndash;oneline android-7.1.2_r5..android-7.1.2_r6&rsquo; &gt; ~/diff.txt</p>
-
-<h4 id="3-6-克隆服务器上git仓指定的分支">3.6 克隆服务器上git仓指定的分支</h4>
-
-<pre><code>git clone -b test ssh://ivan@62.113.205.19:40202/home/ivan/srv/sample.git
-</code></pre>
-
-<h4 id="3-7-linux-挂载-u-盘">3.7 Linux 挂载 U 盘</h4>
+<h4 id="3-9-linux-挂载-u-盘">3.9 Linux 挂载 U 盘</h4>
 
 <pre><code>mkdir /mnt/udisk 
 mount /dev/sda1 /mnt/udisk/ 
 </code></pre>
 
-<h4 id="3-8-linux-加载和卸载驱动模块">3.8 Linux 加载和卸载驱动模块</h4>
+<h4 id="3-10-linux-加载和卸载驱动模块">3.10 Linux 加载和卸载驱动模块</h4>
 
 <p>加载模块：insmod ***.ko
 卸载模块：rmmod</p>
 
-<h4 id="3-9-linux-进程信息查询">3.9 Linux 进程信息查询</h4>
+<h4 id="3-11-linux-进程信息查询">3.11 Linux 进程信息查询</h4>
 
 <p>dumpsys meminfo |grep touchscreen
 pmap - x <pid>查看进程映射</p></article>
