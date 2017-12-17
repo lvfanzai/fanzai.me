@@ -16,18 +16,18 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="记录开发过程中用到的 linux 命令
-
-" />
+  <meta name="description" content="记录开发过程中用到的 linux 命令。 1)仅打包，不压缩
+tar -cvf /usr/local/auto_bak/test.tar /usr/local/test  2)打包后，以gzip压缩 在参数f后面的压缩文件名是自己取的，习惯上用tar，如果加z参数，则以tar.gz 或tgz来代表gzip压缩过的tar file文件
+tar -zcvf /usr/local/auto_bak/test.tar.gz /usr/local/test  解压操作，将上述命令中c修改为x即可。 " />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@lvfanzai" />
     <meta name="twitter:title" content="Linux 命令" />
-    <meta name="twitter:description" content="记录开发过程中用到的 linux 命令
-
-" />
+    <meta name="twitter:description" content="记录开发过程中用到的 linux 命令。 1)仅打包，不压缩
+tar -cvf /usr/local/auto_bak/test.tar /usr/local/test  2)打包后，以gzip压缩 在参数f后面的压缩文件名是自己取的，习惯上用tar，如果加z参数，则以tar.gz 或tgz来代表gzip压缩过的tar file文件
+tar -zcvf /usr/local/auto_bak/test.tar.gz /usr/local/test  解压操作，将上述命令中c修改为x即可。 " />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
@@ -204,9 +204,19 @@
       <h1 class="post-title">Linux 命令</h1>
       <p class="post-meta">@凡仔 · Nov 1, 2016 · 1 min read</p>
     </header>
-    <article class="post-content"><p>记录开发过程中用到的 linux 命令</p>
+    <article class="post-content"><p>记录开发过程中用到的 linux 命令。
+1)仅打包，不压缩</p>
 
-<p></p>
+<pre><code>tar -cvf /usr/local/auto_bak/test.tar /usr/local/test
+</code></pre>
+
+<p>2)打包后，以gzip压缩 在参数f后面的压缩文件名是自己取的，习惯上用tar，如果加z参数，则以tar.gz 或tgz来代表gzip压缩过的tar file文件</p>
+
+<pre><code>tar -zcvf /usr/local/auto_bak/test.tar.gz /usr/local/test 
+</code></pre>
+
+<p>解压操作，将上述命令中c修改为x即可。
+</p>
 
 <h3 id="1-查找相关">1. 查找相关</h3>
 
@@ -231,19 +241,62 @@ indent -kr -i8 main.c</p>
 
 <h3 id="3-git相关">3. git相关</h3>
 
+<p>查看分支：git branch</p>
+
+<p>创建分支：git branch <name></p>
+
+<p>切换分支：git checkout <name></p>
+
+<p>创建+切换分支：git checkout -b <name></p>
+
+<p>合并某分支到当前分支：git merge <name></p>
+
+<p>删除分支：git branch -d <name></p>
+
+<p>git push &ndash;set-upstream origin test</p>
+
 <h4 id="3-1-切换分支">3.1 切换分支</h4>
 
-<p>使用repo将本地代码从master branch转换到指定的branch
-repo forall -c git checkout android-7.1.2_r28</p>
+<p>使用repo将本地代码从master branch转换到指定的branch</p>
+
+<pre><code>repo forall -c git checkout android-7.1.2_r28
+</code></pre>
 
 <h4 id="3-2-每个git仓执行同一个cmd">3.2 每个git仓执行同一个cmd</h4>
 
 <p>repo forall -c command
-1.如果仅仅修改了代码，没有commit提交，恢复与服务器相关代码执行repo forall -c git reset &ndash;hard HEAD</p>
+1.如果仅仅修改了代码，没有commit提交，恢复与服务器相关代码执行</p>
+
+<pre><code>repo forall -c git reset --hard HEAD
+</code></pre>
 
 <p>2.如果commit了代码，repo sync -c -d即可同步到服务器最新代码，重新新建分支，原来分支上提交还存在</p>
 
-<h4 id="3-3">3.3</h4></article>
+<h4 id="3-3-给代码打tag">3.3 给代码打tag</h4>
+
+<pre><code>repo manifest -r -o tag.xml 
+</code></pre>
+
+<p>链接当前代码tag</p>
+
+<pre><code>ln -sf manifests/default.xml manifest.xml
+</code></pre>
+
+<h4 id="3-4-查看工作区与服务器最新代码差别">3.4 查看工作区与服务器最新代码差别</h4>
+
+<pre><code>git diff HEAD -- readme.txt
+</code></pre>
+
+<h4 id="3-5-查看两条分支差别">3.5 查看两条分支差别</h4>
+
+<p>repo forall -pc &lsquo;git log &ndash;no-merges &ndash;oneline android-7.1.2_r5..android-7.1.2_r6&rsquo; &gt; ~/diff.txt</p>
+
+<h4 id="3-6-克隆服务器上git仓指定的分支">3.6 克隆服务器上git仓指定的分支</h4>
+
+<pre><code>git clone -b test ssh://ivan@62.113.205.19:40202/home/ivan/srv/sample.git
+</code></pre>
+
+<h4 id="3-7">3.7</h4></article>
     <footer class="post-footer">
       
       <ul class="post-tags">

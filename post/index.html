@@ -238,9 +238,9 @@
     <p class="post-meta">@凡仔 · Nov 1, 2016 · 1 min read</p>
   </header>
   
-  <p class="post-summary">记录开发过程中用到的 linux 命令
-
-</p>
+  <p class="post-summary">记录开发过程中用到的 linux 命令。 1)仅打包，不压缩
+tar -cvf /usr/local/auto_bak/test.tar /usr/local/test  2)打包后，以gzip压缩 在参数f后面的压缩文件名是自己取的，习惯上用tar，如果加z参数，则以tar.gz 或tgz来代表gzip压缩过的tar file文件
+tar -zcvf /usr/local/auto_bak/test.tar.gz /usr/local/test  解压操作，将上述命令中c修改为x即可。 </p>
   <footer class="post-footer">
     <a class="read-more" href="https://fanzai.me/post/linux-cmd/">Read More →</a>
   </footer>
