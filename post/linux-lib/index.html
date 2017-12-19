@@ -31,6 +31,15 @@
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="静态库和动态库编译" />
+  <meta property="og:description" content="记录动态库so 和静态库lib编译，Makefile， Android.mk技巧。
+
+" />
+  <meta property="og:url" content="https://fanzai.me/post/linux-lib/" />
+  <meta property="og:image" content="https://fanzai.me/img/avatar.jpg" />
+
 
 
 
@@ -206,7 +215,33 @@
     </header>
     <article class="post-content"><p>记录动态库so 和静态库lib编译，Makefile， Android.mk技巧。</p>
 
-<p></p></article>
+<p></p>
+
+<h3 id="1-编译-a静态库">1.编译.a静态库</h3>
+
+<p>（1）用源文件创建目标文件
+   gcc -I/**** -c encypt.c -o encypt.o
+   gcc -c checksum.c -o checksum.o
+（2）用创建的.o目标文件，创建.a静态库
+    ar -rcs libhfsecurity.a encypt.o checksum.o
+（3）使用.a静态库，编译最终生成件
+   gcc bank_vault.c -I . -L . -lhfsecurity -o bank_vault</p>
+
+<p>rcs：r表示如果.a文件存在就更新它
+     c表示创建存档时不显示反馈信息
+     s告诉ar要在.a文件开头创建索引
+     -I告诉编译器头文件存放位置
+     -L告诉编译器库存放路径</p>
+
+<h3 id="2-编译动态so库">2.编译动态so库</h3>
+
+<p>gcc -shared hfcal.o -o c:\libs\hfcal.dll   #windows上的MinGW
+gcc -shared hfcal.o -o /libs/libhfcal.dll.a   #windows上的cygwin
+gcc -shared hfcal.o -o /libs/libhfcal.so #linux或者unix
+gcc -shared hfcal.o -o /libs/libfcal.dylib #mac</p>
+
+<p>gcc -I/include -c elliptical.c -o elliptical.o
+gcc elliptical.o -L/libs -lhfcal  -o elliptical</p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
