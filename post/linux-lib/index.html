@@ -225,11 +225,12 @@
    gcc -c checksum.c -o checksum.o 
 </code></pre>
 
-<p>（2）用创建的.o目标文件，创建.a静态库
-    <code>
-    ar -rcs libhfsecurity.a encypt.o checksum.o 
-   </code>
-（3）使用.a静态库，编译最终生成件</p>
+<p>（2）用创建的.o目标文件，创建.a静态库</p>
+
+<pre><code>    ar -rcs libhfsecurity.a encypt.o checksum.o 
+</code></pre>
+
+<p>（3）使用.a静态库，编译最终生成件</p>
 
 <pre><code>   gcc bank_vault.c -I . -L . -lhfsecurity -o bank_vault 
 </code></pre>
