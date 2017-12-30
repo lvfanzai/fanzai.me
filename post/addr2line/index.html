@@ -233,13 +233,19 @@
 </code></pre>
 
 <p>Look at the last 3 lines; this is your callstack. &lsquo;pc&rsquo; is the program counter, and the pc for stack frame #00 gives you the address where the crash occurred. This is the number to pass to addr2line.
-I&rsquo;m using NDK r5, so the executable I&rsquo;m using is located at $NDK/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin; make sure that is in your $PATH.
-The command to use looks like</p>
+I&rsquo;m using NDK r5, so the executable I&rsquo;m using is located at $NDK/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin; make sure that is in your $PATH.</p>
+
+<p>The command to use looks like</p>
 
 <pre><code>arm-linux-androideabi-addr2line -C -f -e obj/local/armeabi/libXXX.so &lt;address&gt; 
 Or, for the case above: 
 arm-linux-androideabi-addr2line -C -f -e obj/local/armeabi/libnativemaprender.so 00 
-</code></pre></article>
+</code></pre>
+
+<h3 id="附录">附录</h3>
+
+<p>参考网址：
+<a href="https://stackoverflow.com/questions/5314036/how-to-use-addr2line-in-android">https://stackoverflow.com/questions/5314036/how-to-use-addr2line-in-android</a></p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
