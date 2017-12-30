@@ -377,6 +377,16 @@ LOCAL_STATIC_LIBRARIES := ***
 LOCAL_SRC_FILES := *.c
 include $(BUILD_SHARED_LIBRARY)
 
+</code></pre>
+
+<h4 id="2-2-android源码中编译动态库及可执行程序">2.2 Android源码中编译动态库及可执行程序</h4>
+
+<p>Android.mk与NDK下写法大致一样。
+在编译之前需要配置好运行环境</p>
+
+<pre><code>source build/envsetup.sh 
+Lunch 选择angler相关选项（如果需要编译其他内核，选择对应即可）
+make bootimage -j4
 </code></pre></article>
     <footer class="post-footer">
       
