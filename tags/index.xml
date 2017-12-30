@@ -24,7 +24,7 @@
     <item>
       <title>Android</title>
       <link>https://fanzai.me/tags/android/</link>
-      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/android/</guid>
       <description></description>
@@ -153,6 +153,15 @@
       <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/spi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Systrace</title>
+      <link>https://fanzai.me/tags/systrace/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/systrace/</guid>
       <description></description>
     </item>
     

@@ -24,6 +24,17 @@
     </item>
     
     <item>
+      <title>Android Systrace调试</title>
+      <link>https://fanzai.me/post/android-systrace/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/post/android-systrace/</guid>
+      <description>&lt;p&gt;Android Systrace调试方法介绍。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>MacOS 使用 gcc 编译 C 程序</title>
       <link>https://fanzai.me/post/mac-gcc/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
