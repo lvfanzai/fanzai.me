@@ -255,7 +255,7 @@
 
 <p>我们可以在设置 &gt; 关于手机 &gt; 内核版本 中直接查看内核版本信息，也可以通过 <code>cat /proc/version</code> 命令查看。内核版本信息的格式为 kernel version-gXXXXXXX ,其中 XXXXXXX 部分的值是 git 提交中的 short commit id的值</p>
 
-<p>在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e</code> 为下载对应版本的源码。</p>
+<p>在本地 <code>git clone</code> 后，本地只有一个 master 分支，<code>git checkout d59db4e -b 分支名</code> 为下载对应版本的源码并新建对应tag分支。</p>
 
 <h3 id="四-修改-kernel-源码中-makefile">四、修改 kernel 源码中 Makefile</h3>
 
@@ -416,7 +416,7 @@ Android 内核和linux 内核的区别
       </ul>
       
       <p class="post-copyright">
-        Copyright © 2017, 凡仔This post was published <strong>214</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        Copyright © 2017, 凡仔This post was published <strong>306</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
       </p>
     </footer>
     
@@ -424,7 +424,7 @@ Android 内核和linux 内核的区别
     
   </section>
   <footer class="site-footer">
-  <p>© 2017 凡仔</p>
+  <p>© 2017-2018 凡仔</p>
   <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
   
 </footer>
