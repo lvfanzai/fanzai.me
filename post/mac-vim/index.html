@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>Visual Studio 2015 中使用 gtest</title>
+  <title>MacOS 使用 gcc 编译 C 程序</title>
 
   
   
@@ -16,22 +16,28 @@
 
   
   <meta name="author" content="凡仔" />
-  <meta name="description" content="Win 10 Visual Studio 2015 中使用 gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
+  <meta name="description" content="记录MacOS下使用vim技巧。
+
+" />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@lvfanzai" />
-    <meta name="twitter:title" content="Visual Studio 2015 中使用 gtest" />
-    <meta name="twitter:description" content="Win 10 Visual Studio 2015 中使用 gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
+    <meta name="twitter:title" content="MacOS 使用 gcc 编译 C 程序" />
+    <meta name="twitter:description" content="记录MacOS下使用vim技巧。
+
+" />
     <meta name="twitter:image" content="https://fanzai.me/img/avatar.jpg" />
   
 
   
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Visual Studio 2015 中使用 gtest" />
-  <meta property="og:description" content="Win 10 Visual Studio 2015 中使用 gtest 参考文献： http://www.top5solutions.com/google-test-visual-studio-configuration/ " />
-  <meta property="og:url" content="https://fanzai.me/post/vs2015-gtest/" />
+  <meta property="og:title" content="MacOS 使用 gcc 编译 C 程序" />
+  <meta property="og:description" content="记录MacOS下使用vim技巧。
+
+" />
+  <meta property="og:url" content="https://fanzai.me/post/mac-vim/" />
   <meta property="og:image" content="https://fanzai.me/img/avatar.jpg" />
 
 
@@ -40,7 +46,7 @@
 <meta name="generator" content="Hugo 0.31.1" />
 
 
-<link rel="canonical" href="https://fanzai.me/post/vs2015-gtest/" />
+<link rel="canonical" href="https://fanzai.me/post/mac-vim/" />
 <link rel="alternative" href="https://fanzai.me/index.xml" title="凡仔" type="application/atom+xml" />
 
 
@@ -204,54 +210,104 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Visual Studio 2015 中使用 gtest</h1>
-      <p class="post-meta">@凡仔 · Jul 3, 2016 · 1 min read</p>
+      <h1 class="post-title">MacOS 使用 gcc 编译 C 程序</h1>
+      <p class="post-meta">@凡仔 · Apr 2, 2018 · 1 min read</p>
     </header>
-    <article class="post-content"><p>Win 10 Visual Studio 2015 中使用 gtest
-参考文献：
-<a href="http://www.top5solutions.com/google-test-visual-studio-configuration/">http://www.top5solutions.com/google-test-visual-studio-configuration/</a>
-</p>
+    <article class="post-content"><p>记录MacOS下使用vim技巧。</p>
 
-<h3 id="1-新建-win32-控制台项目工程-并去掉预编译头文件">1. 新建 Win32 控制台项目工程，并去掉预编译头文件</h3>
+<p></p>
 
-<h3 id="2-右键项目名-属性-设置gtest目录-包含gtest目录和include目录">2. 右键项目名，属性，设置gtest目录，包含gtest目录和include目录</h3>
+<h3 id="1-基本操作">1 基本操作</h3>
 
-<p><img src="https://fanzai.me/images/15134255931125.png" alt="" /></p>
+<h4 id="1-1-移动命令">1.1 移动命令</h4>
 
-<h3 id="3-在工程源文件夹中添加gtest-main-cc和gtest-all-cc">3. 在工程源文件夹中添加gtest_main.cc和gtest-all.cc</h3>
+<p>按字符移动：h,j,k,l&ndash;左，下，上，右
+按单词：w(向前），b(往后)
+移动到行首：数字0
+移动到行尾：$
+在光标上一行插入：大写字母O
+在光标下一行插入：小写字符o
+整行复制：yy,粘贴：p
+撤销命令：u
+反撤销：ctrl+r
+格式对其：先gg，再=，最后大写G
+跳到系统函数的说明：K</p>
 
-<p><img src="https://fanzai.me/images/15134257284181.png" alt="" /></p>
+<h4 id="1-2-配置">1.2 配置</h4>
 
-<h3 id="4-新建testcase-cpp文件-创建testcase">4. 新建testcase.cpp文件，创建testcase</h3>
+<p>vim 所有的配置都在用户根目录下的.vimrc中，安装了vim之后，可以将vim自带的example.vim作为初始的.vimrc配置。
+example.vim在/usr/share/vim/vimXXX/vimrc_example.vim下，其中XXX为当前vim的版本号。</p>
 
-<pre><code>#include &lt;limits.h&gt; 
-#include &quot;gtest/gtest.h&quot; 
-#include &quot;libalgo.h&quot; 
-class MultiplyTest : public testing::Test { 
-};
-TEST_F(MultiplyTest, findMean)
-{
-       int a; 
-       a = print_test();
-       EXPECT_EQ(0, a);
-}
-</code></pre>
+<h4 id="1-3-插件安装">1.3 插件安装</h4>
 
-<h3 id="5-编译成功-开始执行-不调试-即可出现测试结果">5. 编译成功，开始执行(不调试)即可出现测试结果</h3>
+<h5 id="1-3-1-ctags安装">1.3.1 ctags安装</h5>
 
-<p><img src="https://fanzai.me/images/15134258138831.png" alt="" /></p></article>
+<p>brew install ctags-exuberant
+使用方法：
+1.在需要源代码目录中创建tags
+ctags -R *
+2.cd到源码路径，进入vim
+3.设置tags选项为刚才生成的tags文件命令 “:set tags=tags
+4.查找关键字方法1）输入命令“:tag main”
+查找关键字方法2）使用vimgrep
+命令“:vimgrep /&lt;main&gt;/ ./*.c
+“:cw”执行cw打开quickfix窗口，选择源文件中对应的main
+选择对应的文件，按回车打开。</p>
+
+<p>疑问：
+nmap <leader>lv :lv /<c-r>=expand(&rdquo;<cword>&rdquo;)<cr>/ %<cr>:lw<cr>
+这一个的解释</p>
+
+<p>5.快速查找光标下的单词：shift+*（类似source Insgiht中的标黄某个关键字）</p>
+
+<h4 id="1-3-2-taglist插件">1.3.2 taglist插件</h4>
+
+<p>要是用taglist的前提条件
+1）.vimrc中打开了文件类型检测的功能filetype on
+2）安装了Exuberant ctags插件
+3）vim支持system()调用
+增加taglist相关配置（略）</p>
+
+<h5 id="1-3-3-自动补齐">1.3.3 自动补齐</h5>
+
+<p>系统函数自动补齐
+1）使用ctags将/usr/include和/usr/local/include中头文件生成systags
+2）运行命令：ctags -R -f ~/.vim/systags /usr/include /usr/local/include
+3）在.vimrc中增加set tags+=～/.vim.systags
+在源文件中输入系统相关的函数前几个字母后，按ctrl+x,ctrl+o便可以出现下拉菜单选择需要的系统函数。</p>
+
+<p>拓展：同时可以更改自动补齐下拉菜单的显示格式
+若需要增加c++的自动补齐，需要安装OmniCppComplete插件</p>
+
+<h3 id="2-文件浏览和缓冲区浏览">2 文件浏览和缓冲区浏览</h3>
+
+<h4 id="2-1-目录浏览-netrw插件">2.1 目录浏览：netrw插件</h4>
+
+<p>vim .目录浏览当前所在目录</p>
+
+<h4 id="2-2-缓冲区浏览-bufexplorer插件安装">2.2 缓冲区浏览：BufExplorer插件安装</h4>
+
+<p>进行vimrc配置</p>
+
+<h4 id="2-3-winmanager插件">2.3 winmanager插件</h4>
+
+<p>winmanager 插件可以把前面介绍的 netrw 插件和 BufExplorer 插件集成在一起。</p>
+
+<h4 id="2-4-lookup插件">2.4 lookup插件</h4>
+
+<h3 id="3-集成gcc编译和gdb调试">3 集成gcc编译和gdb调试</h3></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
         
-          <li><a href="https://fanzai.me/tags/vs2015"><span class="tag">VS2015</span></a></li>
+          <li><a href="https://fanzai.me/tags/macos"><span class="tag">MacOS</span></a></li>
         
-          <li><a href="https://fanzai.me/tags/gtest"><span class="tag">Gtest</span></a></li>
+          <li><a href="https://fanzai.me/tags/vim"><span class="tag">Vim</span></a></li>
         
       </ul>
       
       <p class="post-copyright">
-        Copyright © 2017, 凡仔This post was published <strong>640</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        Copyright © 2017, 凡仔
       </p>
     </footer>
     
