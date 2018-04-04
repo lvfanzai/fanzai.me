@@ -221,59 +221,89 @@
 
 <h4 id="1-1-移动命令">1.1 移动命令</h4>
 
-<p>按字符移动：h,j,k,l&ndash;左，下，上，右
-按单词：w(向前），b(往后)
-移动到行首：数字0
-移动到行尾：$
-在光标上一行插入：大写字母O
-在光标下一行插入：小写字符o
-整行复制：yy,粘贴：p
-撤销命令：u
-反撤销：ctrl+r
-格式对其：先gg，再=，最后大写G
-跳到系统函数的说明：K</p>
+<p>按字符移动：h,j,k,l&ndash;左，下，上，右</p>
+
+<p>按单词：w(向前），b(往后)</p>
+
+<p>移动到行首：数字0</p>
+
+<p>移动到行尾：$</p>
+
+<p>在光标上一行插入：大写字母O</p>
+
+<p>在光标下一行插入：小写字符o</p>
+
+<p>整行复制：yy,粘贴：p</p>
+
+<p>撤销命令：u</p>
+
+<p>反撤销：ctrl+r</p>
+
+<p>格式对其：先gg，再=，最后大写G</p>
+
+<p>跳到系统函数的说明：K</p>
 
 <h4 id="1-2-配置">1.2 配置</h4>
 
-<p>vim 所有的配置都在用户根目录下的.vimrc中，安装了vim之后，可以将vim自带的example.vim作为初始的.vimrc配置。
-example.vim在/usr/share/vim/vimXXX/vimrc_example.vim下，其中XXX为当前vim的版本号。</p>
+<p>vim 所有的配置都在用户根目录下的.vimrc中，安装了vim之后，可以将vim自带的example.vim作为初始的.vimrc配置。</p>
+
+<p>example.vim在/usr/share/vim/vimXXX/vimrc_example.vim下，其中XXX为当前vim的版本号。</p>
 
 <h4 id="1-3-插件安装">1.3 插件安装</h4>
 
 <h5 id="1-3-1-ctags安装">1.3.1 ctags安装</h5>
 
-<p>brew install ctags-exuberant
-使用方法：
-1.在需要源代码目录中创建tags
-ctags -R *
-2.cd到源码路径，进入vim
-3.设置tags选项为刚才生成的tags文件命令 “:set tags=tags
-4.查找关键字方法1）输入命令“:tag main”
-查找关键字方法2）使用vimgrep
-命令“:vimgrep /&lt;main&gt;/ ./*.c
-“:cw”执行cw打开quickfix窗口，选择源文件中对应的main
-选择对应的文件，按回车打开。</p>
+<p>brew install ctags-exuberant</p>
+
+<p>使用方法：</p>
+
+<p>1.在需要源代码目录中创建tags</p>
+
+<p>ctags -R *</p>
+
+<p>2.cd到源码路径，进入vim</p>
+
+<p>3.设置tags选项为刚才生成的tags文件命令 “:set tags=tags</p>
+
+<p>4.查找关键字方法1）输入命令“:tag main”</p>
+
+<p>查找关键字方法2）使用vimgrep</p>
+
+<p>命令“:vimgrep /&lt;main&gt;/ ./*.c</p>
+
+<p>“:cw”执行cw打开quickfix窗口，选择源文件中对应的main</p>
+
+<p>选择对应的文件，按回车打开。</p>
 
 <p>5.快速查找光标下的单词：shift+*（类似source Insgiht中的标黄某个关键字）</p>
 
 <h4 id="1-3-2-taglist插件">1.3.2 taglist插件</h4>
 
-<p>要是用taglist的前提条件
-1）.vimrc中打开了文件类型检测的功能filetype on
-2）安装了Exuberant ctags插件
-3）vim支持system()调用
-增加taglist相关配置（略）</p>
+<p>要是用taglist的前提条件</p>
+
+<p>1）.vimrc中打开了文件类型检测的功能filetype on</p>
+
+<p>2）安装了Exuberant ctags插件</p>
+
+<p>3）vim支持system()调用</p>
+
+<p>增加taglist相关配置（略）</p>
 
 <h5 id="1-3-3-自动补齐">1.3.3 自动补齐</h5>
 
-<p>系统函数自动补齐
-1）使用ctags将/usr/include和/usr/local/include中头文件生成systags
-2）运行命令：ctags -R -f ~/.vim/systags /usr/include /usr/local/include
-3）在.vimrc中增加set tags+=～/.vim.systags
-在源文件中输入系统相关的函数前几个字母后，按ctrl+x,ctrl+o便可以出现下拉菜单选择需要的系统函数。</p>
+<p>系统函数自动补齐</p>
 
-<p>拓展：同时可以更改自动补齐下拉菜单的显示格式
-若需要增加c++的自动补齐，需要安装OmniCppComplete插件</p>
+<p>1）使用ctags将/usr/include和/usr/local/include中头文件生成systags</p>
+
+<p>2）运行命令：ctags -R -f ~/.vim/systags /usr/include /usr/local/include</p>
+
+<p>3）在.vimrc中增加set tags+=～/.vim.systags</p>
+
+<p>在源文件中输入系统相关的函数前几个字母后，按ctrl+x,ctrl+o便可以出现下拉菜单选择需要的系统函数。</p>
+
+<p>拓展：同时可以更改自动补齐下拉菜单的显示格式</p>
+
+<p>若需要增加c++的自动补齐，需要安装OmniCppComplete插件</p>
 
 <h3 id="2-文件浏览和缓冲区浏览">2 文件浏览和缓冲区浏览</h3>
 
@@ -295,9 +325,12 @@ ctags -R *
 
 <p>###附录
 遗留问题：
-1.疑问：
-nmap <leader>lv :lv /<c-r>=expand(&rdquo;<cword>&rdquo;)<cr>/ %<cr>:lw<cr>
-这一个的解释</p>
+1.疑问：</p>
+
+<pre><code>nmap &lt;leader&gt;lv :lv /&lt;c-r&gt;=expand(&quot;&lt;cword&gt;&quot;)&lt;cr&gt;/ %&lt;cr&gt;:lw&lt;cr&gt;
+</code></pre>
+
+<p>这一个的解释</p>
 
 <p>2.vim .之后出现
 <img src="https://fanzai.me/images/15228552280242.jpg" alt="" />
