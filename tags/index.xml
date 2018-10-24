@@ -132,7 +132,7 @@
     <item>
       <title>Macos</title>
       <link>https://fanzai.me/tags/macos/</link>
-      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/macos/</guid>
       <description></description>
@@ -144,6 +144,15 @@
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/makefile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ncnn</title>
+      <link>https://fanzai.me/tags/ncnn/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/ncnn/</guid>
       <description></description>
     </item>
     
@@ -202,11 +211,38 @@
     </item>
     
     <item>
+      <title>堆栈保护</title>
+      <link>https://fanzai.me/tags/%E5%A0%86%E6%A0%88%E4%BF%9D%E6%8A%A4/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/%E5%A0%86%E6%A0%88%E4%BF%9D%E6%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>指纹</title>
       <link>https://fanzai.me/tags/%E6%8C%87%E7%BA%B9/</link>
       <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://fanzai.me/tags/%E6%8C%87%E7%BA%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>排序算法</title>
+      <link>https://fanzai.me/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>编译器</title>
+      <link>https://fanzai.me/tags/%E7%BC%96%E8%AF%91%E5%99%A8/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fanzai.me/tags/%E7%BC%96%E8%AF%91%E5%99%A8/</guid>
       <description></description>
     </item>
     
